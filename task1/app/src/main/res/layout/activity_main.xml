@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackGround"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/name_form_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_regular"
+        android:paddingTop="@dimen/padding_regular"
+        android:paddingBottom="@dimen/padding_regular"
+        android:text="@string/name_form_strings"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_regular"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/name_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_form_text"
+        android:layout_alignStart="@+id/name_form_text"
+        android:layout_alignLeft="@+id/name_form_text"
+        android:layout_alignEnd="@+id/name_form_text"
+        android:layout_alignRight="@+id/name_form_text"
+        android:background="@android:color/white"
+        android:padding="@dimen/padding_regular" />
+
+    <TextView
+        android:id="@+id/mail_address_form_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_form"
+        android:layout_marginHorizontal="@dimen/margin_regular"
+        android:paddingTop="@dimen/padding_regular"
+        android:paddingBottom="@dimen/padding_regular"
+        android:text="@string/mail_address_form_text"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_regular"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/mail_address_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mail_address_form_text"
+        android:layout_alignStart="@+id/name_form_text"
+        android:layout_alignLeft="@+id/name_form_text"
+        android:layout_alignEnd="@+id/name_form_text"
+        android:layout_alignRight="@+id/name_form_text"
+        android:background="@android:color/white"
+        android:padding="@dimen/padding_regular" />
+
+    <TextView
+        android:id="@+id/memo_form_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mail_address_form"
+        android:layout_marginHorizontal="@dimen/margin_regular"
+        android:paddingTop="@dimen/padding_regular"
+        android:paddingBottom="@dimen/padding_regular"
+        android:text="@string/memo_form_text"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_regular"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/memo_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/memo_form_text"
+        android:layout_alignStart="@+id/name_form_text"
+        android:layout_alignLeft="@+id/name_form_text"
+        android:layout_alignEnd="@+id/name_form_text"
+        android:layout_alignRight="@+id/name_form_text"
+        android:background="@android:color/white"
+        android:padding="@dimen/padding_regular" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_regular"
+        android:background="@android:color/black"
+        android:text="@string/send_button_text"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_regular" />
+</RelativeLayout>

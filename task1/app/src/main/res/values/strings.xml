@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">task1</string>
+    <string name="name_form_strings">お名前</string>
+    <string name="mail_address_form_text">メールアドレス</string>
+    <string name="memo_form_text">メモ</string>
+    <string name="send_button_text">送信</string>
+</resources>
+
