@@ -17,42 +17,29 @@ class MainActivity : AppCompatActivity() {
         val birthdayYearSpinner: Spinner = findViewById(R.id.birthday_year_spinner)
         val birthdayMonthSpinner: Spinner = findViewById(R.id.birthday_month_spinner)
         val birthdayDaySpinner: Spinner = findViewById(R.id.birthday_day_spinner)
+
+        spinnerFunc(birthdayYearSpinner, R.array.birthday_year_spinner_values)
+        spinnerFunc(birthdayMonthSpinner, R.array.birthday_month_spinner_values)
+        spinnerFunc(birthdayDaySpinner, R.array.birthday_day_spinner_values)
+    }
+
+    private fun spinnerFunc(spinner: Spinner, array: Int) {
         var birthday: String
-        var birthdayYear: String = "0"
-        var birthdayMonth: String = "0"
-        var birthdayDay: String = "0"
+        var birthdayYear: String
+        var birthdayMonth: String
+        var birthdayDay: String
 
         ArrayAdapter.createFromResource(
             this,
-            R.array.birthday_year_spinner_values, android.R.layout.simple_spinner_item
+            array, android.R.layout.simple_spinner_item
         ).also { adapter ->
             // Specify the layout to use when the list of choices appears
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             // Apply the adapter to the spinner
-            birthdayYearSpinner.adapter = adapter
+            spinner.adapter = adapter
         }
 
-        ArrayAdapter.createFromResource(
-            this,
-            R.array.birthday_month_spinner_values, android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            // Specify the layout to use when the list of choices appears
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            // Apply the adapter to the spinner
-            birthdayMonthSpinner.adapter = adapter
-        }
-
-        ArrayAdapter.createFromResource(
-            this,
-            R.array.birthday_day_spinner_values, android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            // Specify the layout to use when the list of choices appears
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            // Apply the adapter to the spinner
-            birthdayDaySpinner.adapter = adapter
-        }
-
-        birthdayYearSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>?,
                 view: View?, position: Int, id: Long
@@ -60,49 +47,33 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
                 // Kotlin Android Extensions
-                birthdayYear = item
+                when (spinner) {
+                    birthday_year_spinner -> {
+                        birthdayYear = item
+                    }
+                    birthday_month_spinner -> {
+                        birthdayMonth = item
+                    }
+                    birthday_day_spinner -> {
+                        birthdayDay = item
+                    }
+                }
                 birthday = birthdayYear + "年" + birthdayMonth + "月" + birthdayDay + "日"
                 birthday_confirm_text.text = birthday
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                birthdayYear = "0"
-            }
-        }
-
-        birthdayMonthSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-                // Kotlin Android Extensions
-                birthdayMonth = item
-                birthday = birthdayYear + "年" + birthdayMonth + "月" + birthdayDay + "日"
-                birthday_confirm_text.text = birthday
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                birthdayMonth = "0"
-            }
-        }
-
-        birthdayDaySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-                // Kotlin Android Extensions
-                birthdayDay = item
-                birthday = birthdayYear + "年" + birthdayMonth + "月" + birthdayDay + "日"
-                birthday_confirm_text.text = birthday
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                birthdayDay = "0"
+                when (spinner) {
+                    birthday_year_spinner -> {
+                        birthdayYear = "0"
+                    }
+                    birthday_month_spinner -> {
+                        birthdayMonth = "0"
+                    }
+                    birthday_day_spinner -> {
+                        birthdayDay = "0"
+                    }
+                }
             }
         }
     }
