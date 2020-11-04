@@ -10,6 +10,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    var birthday: String = ""
+    var birthdayYear: String = "0"
+    var birthdayMonth: String = "0"
+    var birthdayDay: String = "0"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,11 +29,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun spinnerFunc(spinner: Spinner, array: Int) {
-        var birthday: String
-        var birthdayYear: String
-        var birthdayMonth: String
-        var birthdayDay: String
-
         ArrayAdapter.createFromResource(
             this,
             array, android.R.layout.simple_spinner_item
