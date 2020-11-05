@@ -150,7 +150,8 @@
             android:gravity="top|left"
             android:inputType="textMultiLine"
             android:paddingLeft="10dp"
-            android:paddingTop="10dp" />
+            android:paddingTop="10dp"
+            android:scrollbars="vertical" />
 
         <TextView
             android:id="@+id/memo_form_text"
@@ -173,7 +174,8 @@
             android:gravity="top|left"
             android:inputType="textMultiLine"
             android:paddingLeft="10dp"
-            android:paddingTop="10dp" />
+            android:paddingTop="10dp"
+            android:scrollbars="vertical" />
 
         <LinearLayout
             android:layout_width="match_parent"

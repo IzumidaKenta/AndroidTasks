@@ -1,12 +1,17 @@
 package com.example.task2
 
-import androidx.appcompat.app.AppCompatActivity
+import android.annotation.SuppressLint
 import android.os.Bundle
-import android.widget.Spinner
-import android.widget.ArrayAdapter
-import android.widget.AdapterView
+import android.view.MotionEvent
 import android.view.View
+import android.view.View.OnTouchListener
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.EditText
+import android.widget.Spinner
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     var birthdayMonth: String = "0"
     var birthdayDay: String = "0"
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,9 +29,15 @@ class MainActivity : AppCompatActivity() {
         val birthdayMonthSpinner: Spinner = findViewById(R.id.birthday_month_spinner)
         val birthdayDaySpinner: Spinner = findViewById(R.id.birthday_day_spinner)
 
+        val addressFormEt: EditText = findViewById(R.id.address_form)
+        val memoFormEt: EditText = findViewById(R.id.memo_form)
+
         spinnerFunc(birthdayYearSpinner, R.array.birthday_year_spinner_values)
         spinnerFunc(birthdayMonthSpinner, R.array.birthday_month_spinner_values)
         spinnerFunc(birthdayDaySpinner, R.array.birthday_day_spinner_values)
+
+        scrollEditText(addressFormEt)
+        scrollEditText(memoFormEt)
     }
 
     private fun spinnerFunc(spinner: Spinner, array: Int) {
@@ -76,5 +88,18 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    private fun scrollEditText(editText: EditText) {
+        editText.setOnTouchListener(OnTouchListener { view, motionEvent ->
+            view.parent.requestDisallowInterceptTouchEvent(true)
+            when (motionEvent.action and MotionEvent.ACTION_MASK) {
+                MotionEvent.ACTION_UP -> view.parent.requestDisallowInterceptTouchEvent(
+                    false
+                )
+            }
+            false
+        })
     }
 }
