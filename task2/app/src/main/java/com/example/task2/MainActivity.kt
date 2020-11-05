@@ -29,15 +29,19 @@ class MainActivity : AppCompatActivity() {
         val birthdayMonthSpinner: Spinner = findViewById(R.id.birthday_month_spinner)
         val birthdayDaySpinner: Spinner = findViewById(R.id.birthday_day_spinner)
 
-        val addressFormEt: EditText = findViewById(R.id.address_form)
-        val memoFormEt: EditText = findViewById(R.id.memo_form)
-
         spinnerFunc(birthdayYearSpinner, R.array.birthday_year_spinner_values)
         spinnerFunc(birthdayMonthSpinner, R.array.birthday_month_spinner_values)
         spinnerFunc(birthdayDaySpinner, R.array.birthday_day_spinner_values)
 
-        scrollEditText(addressFormEt)
-        scrollEditText(memoFormEt)
+        val listener: View.OnTouchListener = View.OnTouchListener { v, event ->
+            v.parent.requestDisallowInterceptTouchEvent(true)
+            when (event.action and MotionEvent.ACTION_MASK) {
+                MotionEvent.ACTION_UP -> v.parent.requestDisallowInterceptTouchEvent(false)
+            }
+            false
+        }
+        memo_form.setOnTouchListener(listener)
+        address_form.setOnTouchListener(listener)
     }
 
     private fun spinnerFunc(spinner: Spinner, array: Int) {
@@ -88,18 +92,5 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-    }
-
-    @SuppressLint("ClickableViewAccessibility")
-    private fun scrollEditText(editText: EditText) {
-        editText.setOnTouchListener(OnTouchListener { view, motionEvent ->
-            view.parent.requestDisallowInterceptTouchEvent(true)
-            when (motionEvent.action and MotionEvent.ACTION_MASK) {
-                MotionEvent.ACTION_UP -> view.parent.requestDisallowInterceptTouchEvent(
-                    false
-                )
-            }
-            false
-        })
     }
 }
