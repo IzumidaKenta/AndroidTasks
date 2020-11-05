@@ -2,4 +2,5 @@
     <string name="app_name">task3</string>
     <string name="header_title_text">トレーニング</string>
     <string name="explanation_text">文字や画像を重ねて見ましょう\n使えるのは指定された画像のみ。\nそれ以外のUIはxmlで頑張って作成してみましょう！</string>
+    <string name="sample_text">sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text </string>
 </resources>
