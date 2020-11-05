@@ -112,7 +112,7 @@ class MainActivity : AppCompatActivity() {
         return super.dispatchTouchEvent(ev)
     }
 
-    fun hideKeyboard(activity: Activity?) {
+    private fun hideKeyboard(activity: Activity?) {
         if (activity != null && activity.window != null && activity.window.decorView != null) {
             val imm: InputMethodManager =
                 activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
