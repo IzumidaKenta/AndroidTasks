@@ -67,8 +67,8 @@
                 android:paddingVertical="15dp">
 
                 <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="116dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:src="@drawable/thumbnail1" />
@@ -102,8 +102,8 @@
                     android:textSize="10sp" />
 
                 <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="116dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:src="@drawable/thumbnail2" />
