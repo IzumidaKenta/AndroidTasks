@@ -2,6 +2,7 @@ package com.example.task4
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ListView
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         mItemList = arrayListOf(item1, item2)
 
         val listView = findViewById<ListView>(R.id.listView)
+        val header: View = View.inflate(this, R.layout.header, null)
+        listView.addHeaderView(header, null, false)
 
         // CustomAdapterの生成と設定
         mCustomAdapter = CustomAdapter(this, mItemList)
