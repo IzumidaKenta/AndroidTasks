@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="01-0000-0000"
-        android:textColor="#a90001"
+        android:textColor="@color/red"
         android:textSize="13dp" />
 
 </LinearLayout>
