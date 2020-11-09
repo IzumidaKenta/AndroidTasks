@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:gravity="center_vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="営業部1"
+        android:textColor="@android:color/black"
+        android:textSize="17sp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="25dp"
+        android:background="@drawable/shape_rounded_corners_10dp"
+        android:text="Webページ"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
+
+</LinearLayout>
