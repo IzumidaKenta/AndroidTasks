@@ -7,9 +7,11 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 
-class CustomAdapter(context: Context, var mItemList: List<Item>) : ArrayAdapter<Item>(context, 0, mItemList) {
+class CustomAdapter(context: Context, var mItemList: List<Item>) :
+    ArrayAdapter<Item>(context, 0, mItemList) {
 
-    private val layoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+    private val layoutInflater =
+        context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         // Itemの取得
@@ -18,7 +20,7 @@ class CustomAdapter(context: Context, var mItemList: List<Item>) : ArrayAdapter<
         // レイアウトの設定
         var view = convertView
         if (convertView == null) {
-            view = layoutInflater.inflate(R.layout.item1, parent, false)
+            view = layoutSettings(parent, item.type)
         }
 
         // 各Viewの設定
@@ -29,5 +31,21 @@ class CustomAdapter(context: Context, var mItemList: List<Item>) : ArrayAdapter<
         phoneNum?.text = item.phoneNum
 
         return view!!
+    }
+
+    private fun layoutSettings(parent: ViewGroup, type: Int): View? {
+        var view: View? = null
+        when (type) {
+            1 -> {
+                view = layoutInflater.inflate(R.layout.item1, parent, false)
+            }
+            2 -> {
+                view = layoutInflater.inflate(R.layout.item2, parent, false)
+            }
+            3 -> {
+                view = layoutInflater.inflate(R.layout.item3, parent, false)
+            }
+        }
+        return view
     }
 }
