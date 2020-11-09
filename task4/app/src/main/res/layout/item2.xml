@@ -19,9 +19,9 @@
         android:layout_weight="1" />
 
     <Button
-        android:layout_width="110dp"
-        android:layout_height="25dp"
-        android:background="@drawable/shape_rounded_corners_10dp"
+        android:layout_width="120dp"
+        android:layout_height="27dp"
+        android:background="@drawable/shape_rounded_corners"
         android:text="Webページ"
         android:textColor="@android:color/white"
         android:textSize="10sp" />

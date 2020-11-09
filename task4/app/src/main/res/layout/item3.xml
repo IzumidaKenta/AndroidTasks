@@ -18,7 +18,7 @@
         android:id="@+id/details"
         android:layout_width="wrap_content"
         android:layout_height="15sp"
-        android:text="平日、土日祝日9:00〜18:00(年末年始を除く)"
+        android:text="平日、土日祝日 9:00〜18:00 (年末年始を除く)"
         android:textColor="@android:color/black"
         android:textSize="9sp" />
 
