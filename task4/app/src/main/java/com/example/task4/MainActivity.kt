@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         // データ一覧の実装
         val item1 = Item("営業部1", "01-0000-0000")
-        val item2 = Item("営業部3", "01-0000-0000")
+        val item2 = Item("営業部3", "02-0000-0000")
         mItemList = arrayListOf(item1, item2)
 
         val listView = findViewById<ListView>(R.id.listView)
