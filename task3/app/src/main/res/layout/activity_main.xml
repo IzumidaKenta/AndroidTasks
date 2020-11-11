@@ -72,7 +72,6 @@
                     android:src="@drawable/thumbnail1" />
 
                 <com.example.task3.CharacterWrapTextView
-                    android:id="@+id/textView3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
@@ -95,7 +94,6 @@
                 android:paddingVertical="15dp">
 
                 <com.example.task3.CharacterWrapTextView
-                    android:id="@+id/textView4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
