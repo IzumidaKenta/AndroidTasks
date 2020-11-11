@@ -125,7 +125,7 @@
                     android:layout_gravity="right|bottom"
                     android:src="@drawable/reef" />
 
-                <TextView
+                <com.example.task3.CharacterWrapTextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginRight="20dp"
