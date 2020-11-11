@@ -6,21 +6,15 @@
     <FrameLayout xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="110dp"
+        android:background="#e0d9d9"
         tools:context=".MainActivity">
 
-        <LinearLayout
+        <View
             android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:background="#e0d9d9"
-            android:orientation="vertical">
+            android:layout_height="10dp"
+            android:background="#796c6b" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="#796c6b" />
-
-        </LinearLayout>
 
         <ImageView
             android:id="@+id/headerFlagImageView"
