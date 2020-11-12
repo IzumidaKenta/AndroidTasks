@@ -41,7 +41,7 @@ class CustomAdapter(context: Context, var mItemList: List<Item>) :
         val webPageButton = view?.findViewById<Button>(R.id.webPageButton)
         webPageButton?.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://google.co.jp"))
-            startActivity(intent)
+            startActivity(context, intent, null)
         }
 
 
