@@ -18,12 +18,13 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <TextView
+    <Button
         android:id="@+id/phoneNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="01-0000-0000"
         android:textColor="@color/red"
-        android:textSize="13dp" />
+        android:textSize="13dp"
+        android:background="@android:color/white"/>
 
 </LinearLayout>

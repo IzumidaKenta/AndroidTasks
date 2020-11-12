@@ -31,14 +31,20 @@ class CustomAdapter(context: Context, var mItemList: List<Item>) :
         val name = view?.findViewById<TextView>(R.id.name)
         name?.text = item.name
 
-        val phoneNum = view?.findViewById<TextView>(R.id.phoneNum)
+        val phoneNum = view?.findViewById<Button>(R.id.phoneNum)
         phoneNum?.text = item.phoneNum
+        phoneNum?.setOnClickListener {
+            val intent = Intent(Intent.ACTION_DIAL, Uri.parse((item.phoneNum)))
+            startActivity(intent)
+        }
 
         val webPageButton = view?.findViewById<Button>(R.id.webPageButton)
         webPageButton?.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://google.co.jp"))
             startActivity(intent)
         }
+
+
 
         return view!!
     }
