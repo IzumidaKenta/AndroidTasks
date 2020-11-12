@@ -34,8 +34,8 @@ class CustomAdapter(context: Context, var mItemList: List<Item>) :
         val phoneNum = view?.findViewById<Button>(R.id.phoneNum)
         phoneNum?.text = item.phoneNum
         phoneNum?.setOnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL, Uri.parse((item.phoneNum)))
-            startActivity(intent)
+            val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + item.phoneNum))
+            startActivity(context, intent, null)
         }
 
         val webPageButton = view?.findViewById<Button>(R.id.webPageButton)

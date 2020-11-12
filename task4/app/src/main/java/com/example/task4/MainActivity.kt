@@ -15,9 +15,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // データ一覧の実装
-        val item1 = Item(1, "営業部1", "01-0000-0000")
+        val item1 = Item(1, "営業部1", "0100000000")
         val item2 = Item(2, "営業部2", null)
-        val item3 = Item(1, "営業部3", "02-0000-0000")
+        val item3 = Item(1, "営業部3", "0200000000")
         val item4 = Item(3, "営業部4", null)
         mItemList = arrayListOf(item1, item2, item3, item4)
 
