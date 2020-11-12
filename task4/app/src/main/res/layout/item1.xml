@@ -22,9 +22,9 @@
         android:id="@+id/phoneNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         android:text="01-0000-0000"
         android:textColor="@color/red"
-        android:textSize="13dp"
-        android:background="@android:color/white"/>
+        android:textSize="13dp" />
 
 </LinearLayout>
