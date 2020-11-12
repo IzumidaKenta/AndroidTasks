@@ -33,6 +33,10 @@ class CustomAdapter(context: Context, var mItemList: List<Item>) :
 
         val phoneNum = view?.findViewById<Button>(R.id.phoneNum)
         phoneNum?.text = item.phoneNum
+
+        val details = view?.findViewById<TextView>(R.id.details)
+        details?.text = item.details
+
         phoneNum?.setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + item.phoneNum))
             startActivity(context, intent, null)
@@ -43,8 +47,6 @@ class CustomAdapter(context: Context, var mItemList: List<Item>) :
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://google.co.jp"))
             startActivity(context, intent, null)
         }
-
-
 
         return view!!
     }
