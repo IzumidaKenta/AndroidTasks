@@ -1,11 +1,15 @@
 package com.example.task4
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 
 class CustomAdapter(context: Context, var mItemList: List<Item>) :
     ArrayAdapter<Item>(context, 0, mItemList) {
@@ -29,6 +33,12 @@ class CustomAdapter(context: Context, var mItemList: List<Item>) :
 
         val phoneNum = view?.findViewById<TextView>(R.id.phoneNum)
         phoneNum?.text = item.phoneNum
+
+        val webPageButton = view?.findViewById<Button>(R.id.webPageButton)
+        webPageButton?.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://google.co.jp"))
+            startActivity(intent)
+        }
 
         return view!!
     }
