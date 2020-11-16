@@ -28,7 +28,8 @@
         android:layout_height="match_parent"
         android:layout_above="@id/footer"
         android:layout_below="@id/header"
-        android:background="#ffe1e0" />
+        android:background="#ffe1e0"
+        android:divider="@null" />
 
 
     <LinearLayout
