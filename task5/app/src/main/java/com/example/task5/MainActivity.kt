@@ -1,11 +1,13 @@
 package com.example.task5
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.widget.ListView
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,6 +33,12 @@ class MainActivity : AppCompatActivity() {
                 messageEditText.editableText.clear()
                 mMessageList.add(newMessage)
                 mMessageList.add(replyMessage)
+                //リストアイテムの総数-1（0番目から始まって最後のアイテム）にスクロールさせる
+                //リストアイテムの総数-1（0番目から始まって最後のアイテム）にスクロールさせる
+
+                Handler().postDelayed(Runnable {
+                    listView.smoothScrollToPosition(listView.count - 1)
+                }, 100)
             }
         }
     }
