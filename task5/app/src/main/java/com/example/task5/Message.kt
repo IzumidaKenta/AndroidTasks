@@ -1,3 +1,5 @@
 package com.example.task5
 
-class Message(val type: Int, val message: String, val sendTime: String)
+import android.text.Editable
+
+class Message(val type: Int, val message: String, val sendTime: String?)
