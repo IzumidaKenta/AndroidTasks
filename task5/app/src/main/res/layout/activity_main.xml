@@ -22,19 +22,14 @@
             android:textStyle="normal" />
     </LinearLayout>
 
-    <ScrollView
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_above="@id/footer"
         android:layout_below="@id/header"
-        android:background="#ffe1e0">
+        android:background="#ffe1e0" />
 
-        <ListView
-            android:id="@+id/listView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
-    </ScrollView>
 
     <LinearLayout
         android:id="@+id/footer"
