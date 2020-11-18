@@ -34,7 +34,9 @@ class MainActivity : AppCompatActivity() {
                 val newMessage = Message(1, messageEditText.text.toString(), getNowTime())
                 val replyMessage = Message(2, randomReply(), getNowTime())
                 messageEditText.editableText.clear()
+                mMessageList.add(newMessage)
                 add(newMessage)
+                mMessageList.add(replyMessage)
                 add(replyMessage)
                 //リストアイテムの総数-1（0番目から始まって最後のアイテム）にスクロールさせる
                 Handler(Looper.getMainLooper()).postDelayed(Runnable {
