@@ -6,14 +6,17 @@ import android.os.Looper
 import android.util.Log
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.QuerySnapshot
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
 
+
 class MainActivity : AppCompatActivity() {
 
-    lateinit var mCustomAdapter: CustomAdapter
     val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,12 +24,28 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val mMessageList = arrayListOf<Message>()
-        val listView = findViewById<ListView>(R.id.listView)
 
-        // CustomAdapterの生成と設定
-        mCustomAdapter = CustomAdapter(this, mMessageList)
-        listView.adapter = mCustomAdapter
-
+        //データベースのメッセージを読み込んでListViewを生成
+        db.collection("talks").get()
+            .addOnCompleteListener(object : OnCompleteListener<QuerySnapshot> {
+                override fun onComplete(task: Task<QuerySnapshot>) {
+                    if (task.isSuccessful) {
+                        for (document in task.result!!) {
+                            val message: Message = document.toObject<Message>(Message::class.java)
+                            mMessageList.add(message)
+                        }
+                        val listView = findViewById<ListView>(R.id.listView)
+                        val mCustomAdapter = CustomAdapter(this, mMessageList)
+                        listView.adapter = mCustomAdapter
+                    } else {
+                        Log.d(
+                            "MissionActivity",
+                            "Error getting documents: ",
+                            task.exception
+                        )
+                    }
+                }
+            })
 
         //送信ボタンタップ時の処理
         sendButton.setOnClickListener {
