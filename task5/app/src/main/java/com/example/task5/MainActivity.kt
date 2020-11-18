@@ -18,7 +18,8 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     val db = FirebaseFirestore.getInstance()
-    val context = this;
+    val context = this
+    var count = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         val mMessageList = arrayListOf<Message>()
 
         //データベースのメッセージを読み込んでListViewを生成
-        db.collection("talks").get()
+        db.collection("talks").orderBy("id").get()
             .addOnCompleteListener(object : OnCompleteListener<QuerySnapshot> {
                 override fun onComplete(task: Task<QuerySnapshot>) {
                     if (task.isSuccessful) {
@@ -51,8 +52,9 @@ class MainActivity : AppCompatActivity() {
         //送信ボタンタップ時の処理
         sendButton.setOnClickListener {
             if (messageEditText != null) {
-                val newMessage = Message(1, messageEditText.text.toString(), getNowTime())
-                val replyMessage = Message(2, randomReply(), getNowTime())
+                val newMessage = Message(count, 1, messageEditText.text.toString(), getNowTime())
+                count += 1
+                val replyMessage = Message(count, 2, randomReply(), getNowTime())
                 messageEditText.editableText.clear()
                 mMessageList.add(newMessage)
                 add(newMessage)
@@ -62,6 +64,7 @@ class MainActivity : AppCompatActivity() {
                 Handler(Looper.getMainLooper()).postDelayed(Runnable {
                     listView.smoothScrollToPosition(listView.count - 1)
                 }, 100)
+                count += 1
             }
         }
     }
@@ -91,6 +94,7 @@ class MainActivity : AppCompatActivity() {
 
     fun Message.toMap(): Map<String, *> {
         return hashMapOf(
+            "id" to this.id,
             "type" to this.type,
             "message" to this.message,
             "sendTime" to this.sendTime
