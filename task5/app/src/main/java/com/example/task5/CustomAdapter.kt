@@ -14,13 +14,23 @@ class CustomAdapter(context: Context, var mMessageList: List<Message>) :
         context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        // Itemの取得
+
+        var view = convertView
         val messageItem = mMessageList[position]
+        val resourceId = if (messageItem.type == 1) R.layout.message1 else R.layout.message2
 
         // レイアウトの設定
-        var view = convertView
-        if (convertView == null) {
-            view = layoutSettings(parent, messageItem.type)
+        if (view == null) {
+            view = layoutInflater.inflate(resourceId, parent, false)
+            // このViewのResource IDをTagとして持たせておく
+            view.tag = resourceId;
+        } else {
+            // convertViewがnullでなければResource IDを取得する
+            val prevResourceId = view.tag as Int
+            if (resourceId != prevResourceId) {
+                view = layoutInflater.inflate(resourceId, parent, false)
+                view.tag = resourceId
+            }
         }
 
         // 各Viewの設定
@@ -33,16 +43,5 @@ class CustomAdapter(context: Context, var mMessageList: List<Message>) :
         return view!!
     }
 
-    private fun layoutSettings(parent: ViewGroup, type: Int): View? {
-        var view: View? = null
-        when (type) {
-            1 -> {
-                view = layoutInflater.inflate(R.layout.message1, parent, false)
-            }
-            2 -> {
-                view = layoutInflater.inflate(R.layout.message2, parent, false)
-            }
-        }
-        return view
-    }
+
 }
