@@ -18,6 +18,7 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     val db = FirebaseFirestore.getInstance()
+    val context = this;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                             mMessageList.add(message)
                         }
                         val listView = findViewById<ListView>(R.id.listView)
-                        val mCustomAdapter = CustomAdapter(this, mMessageList)
+                        val mCustomAdapter = CustomAdapter(context, mMessageList)
                         listView.adapter = mCustomAdapter
                     } else {
                         Log.d(
