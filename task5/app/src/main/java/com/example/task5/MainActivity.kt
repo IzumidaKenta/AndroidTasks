@@ -2,6 +2,7 @@ package com.example.task5
 
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                 mMessageList.add(newMessage)
                 mMessageList.add(replyMessage)
                 //リストアイテムの総数-1（0番目から始まって最後のアイテム）にスクロールさせる
-                Handler().postDelayed(Runnable {
+                Handler(Looper.getMainLooper()).postDelayed(Runnable {
                     listView.smoothScrollToPosition(listView.count - 1)
                 }, 100)
             }
