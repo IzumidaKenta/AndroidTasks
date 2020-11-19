@@ -10,8 +10,4 @@
         android:background="@android:color/darker_gray"
         android:scaleType="centerCrop" />
 
-    <TextView
-        android:id="@+id/url"
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
 </RelativeLayout>

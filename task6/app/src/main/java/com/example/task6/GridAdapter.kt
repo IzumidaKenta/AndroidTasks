@@ -1,11 +1,16 @@
 package com.example.task6
 
 import android.content.Context
+import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import java.io.InputStream
+import java.net.URL
+import kotlinx.coroutines.async
+
 
 class GridAdapter(context: Context, var mImageList: List<ImagePass>) :
     ArrayAdapter<ImagePass>(context, 0, mImageList) {
@@ -22,8 +27,13 @@ class GridAdapter(context: Context, var mImageList: List<ImagePass>) :
             view = layoutInflater.inflate(R.layout.grid_items, parent, false)
         }
 
-        val message = view?.findViewById<TextView>(R.id.url)
-        message?.text = imageItem.url
+        val image = view?.findViewById<GridViewItem>(R.id.image_view)
+        async {
+            val url = URL(imageItem.url)
+            val tIstream: InputStream = url.openStream()
+            val mBitmap = BitmapFactory.decodeStream(tIstream);
+            image?.setImageBitmap(mBitmap)
+        }
 
         return view!!
     }

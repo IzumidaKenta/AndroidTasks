@@ -1,6 +1,5 @@
 package com.example.task6
 
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -27,7 +26,8 @@ class MainActivity : AppCompatActivity() {
                 override fun onComplete(task: Task<QuerySnapshot>) {
                     if (task.isSuccessful) {
                         for (document in task.result!!) {
-                            val imagePass: ImagePass = document.toObject<ImagePass>(ImagePass::class.java)
+                            val imagePass: ImagePass =
+                                document.toObject<ImagePass>(ImagePass::class.java)
                             mImageList.add(imagePass)
                         }
 
