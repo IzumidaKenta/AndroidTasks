@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 
-class GridAdapter(context: Context, var mImageList: List<String>) :
-    ArrayAdapter<String>(context, 0, mImageList) {
+class GridAdapter(context: Context, var mImageList: List<ImagePass>) :
+    ArrayAdapter<ImagePass>(context, 0, mImageList) {
 
     private val layoutInflater =
         context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -23,7 +23,7 @@ class GridAdapter(context: Context, var mImageList: List<String>) :
         }
 
         val message = view?.findViewById<TextView>(R.id.url)
-        message?.text = imageItem
+        message?.text = imageItem.url
 
         return view!!
     }

@@ -1,30 +1,47 @@
 package com.example.task6
 
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.QuerySnapshot
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     val db = FirebaseFirestore.getInstance()
+    val context = this
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val imageList = arrayListOf<String>()
-        imageList.add("https:1")
-        imageList.add("https:2")
-        imageList.add("https:3")
-        imageList.add("https:4")
-        imageList.add("https:5")
-        imageList.add("https:6")
-        imageList.add("https:7")
-        imageList.add("https:8")
-        imageList.add("https:9")
+        val mImageList = arrayListOf<ImagePass>()
 
-        val gridAdapter = GridAdapter(this, imageList)
-        gridView.adapter = gridAdapter
+        //データベースのメッセージを読み込んでListViewを生成
+        db.collection("imagePass").orderBy("id").get()
+            .addOnCompleteListener(object : OnCompleteListener<QuerySnapshot> {
+                override fun onComplete(task: Task<QuerySnapshot>) {
+                    if (task.isSuccessful) {
+                        for (document in task.result!!) {
+                            val imagePass: ImagePass = document.toObject<ImagePass>(ImagePass::class.java)
+                            mImageList.add(imagePass)
+                        }
+
+                        val gridAdapter = GridAdapter(context, mImageList)
+                        gridView.adapter = gridAdapter
+                    } else {
+                        Log.d(
+                            "MissionActivity",
+                            "Error getting documents: ",
+                            task.exception
+                        )
+                    }
+                }
+            })
+
     }
 }
