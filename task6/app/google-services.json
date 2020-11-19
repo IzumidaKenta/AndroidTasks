@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "685224550750",
+    "firebase_url": "https://task6albumapp.firebaseio.com",
+    "project_id": "task6albumapp",
+    "storage_bucket": "task6albumapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685224550750:android:c06d8b873554867b376fcf",
+        "android_client_info": {
+          "package_name": "com.example.task6"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "685224550750-6qv99sfp5f3g618t7hmvmhioct2hnmhq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9us2n4ZBeKI7F1hLqf47HVI_s4IZbnDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "685224550750-6qv99sfp5f3g618t7hmvmhioct2hnmhq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
