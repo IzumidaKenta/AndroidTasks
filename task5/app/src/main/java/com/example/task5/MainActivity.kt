@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
                         val listView = findViewById<ListView>(R.id.listView)
                         val mCustomAdapter = CustomAdapter(context, mMessageList)
                         listView.adapter = mCustomAdapter
+                        autoScrollToNewMessage(false)
                     } else {
                         Log.d(
                             "MissionActivity",
@@ -59,10 +60,7 @@ class MainActivity : AppCompatActivity() {
                 add(newMessage)
                 mMessageList.add(replyMessage)
                 add(replyMessage)
-                //リストアイテムの総数-1（0番目から始まって最後のアイテム）にスクロールさせる
-                Handler(Looper.getMainLooper()).postDelayed(Runnable {
-                    listView.smoothScrollToPosition(listView.count - 1)
-                }, 100)
+                autoScrollToNewMessage(true)
             }
         }
     }
@@ -103,6 +101,17 @@ class MainActivity : AppCompatActivity() {
             "message" to this.message,
             "sendTime" to this.sendTime
         )
+    }
+
+    fun autoScrollToNewMessage(animation: Boolean) {
+        //リストアイテムの総数-1（0番目から始まって最後のアイテム）にスクロールさせる
+        if (animation) {
+            Handler(Looper.getMainLooper()).postDelayed(Runnable {
+                listView.smoothScrollToPosition(listView.count - 1)
+            }, 100)
+        } else {
+            listView.setSelection(listView.count - 1)
+        }
     }
 }
 
