@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "586310628914",
+    "firebase_url": "https://task5chatapp.firebaseio.com",
+    "project_id": "task5chatapp",
+    "storage_bucket": "task5chatapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:586310628914:android:3352bde9544a618f0dae2b",
+        "android_client_info": {
+          "package_name": "com.example.task5"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "586310628914-h75suj4or0spk9f4f887gtdo83125tom.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5y3P33SR0quosmDglYnTpy-7PeRGFrHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "586310628914-h75suj4or0spk9f4f887gtdo83125tom.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
