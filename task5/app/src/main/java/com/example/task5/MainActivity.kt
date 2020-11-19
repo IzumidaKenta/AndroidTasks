@@ -11,6 +11,7 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.QuerySnapshot
 import kotlinx.android.synthetic.main.activity_main.*
+import java.math.BigInteger
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -19,7 +20,6 @@ class MainActivity : AppCompatActivity() {
 
     val db = FirebaseFirestore.getInstance()
     val context = this
-    var count = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,9 +52,8 @@ class MainActivity : AppCompatActivity() {
         //送信ボタンタップ時の処理
         sendButton.setOnClickListener {
             if (messageEditText != null) {
-                val newMessage = Message(count, 1, messageEditText.text.toString(), getNowTime())
-                count += 1
-                val replyMessage = Message(count, 2, randomReply(), getNowTime())
+                val newMessage = Message(getId(), 1, messageEditText.text.toString(), getNowTime())
+                val replyMessage = Message(getId(), 2, randomReply(), getNowTime())
                 messageEditText.editableText.clear()
                 mMessageList.add(newMessage)
                 add(newMessage)
@@ -64,7 +63,6 @@ class MainActivity : AppCompatActivity() {
                 Handler(Looper.getMainLooper()).postDelayed(Runnable {
                     listView.smoothScrollToPosition(listView.count - 1)
                 }, 100)
-                count += 1
             }
         }
     }
@@ -79,6 +77,12 @@ class MainActivity : AppCompatActivity() {
         val date = Date()
         val format = SimpleDateFormat("HH:mm", Locale.getDefault())
         return format.format(date)
+    }
+
+    fun getId(): Long {
+        val date = Date()
+        val format = SimpleDateFormat("yyyyMMddHHmmssSSS", Locale.getDefault())
+        return format.format(date).toLong()
     }
 
     fun add(message: Message) {
