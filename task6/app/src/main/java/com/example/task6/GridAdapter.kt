@@ -7,10 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ProgressBar
-import android.widget.TextView
+import kotlinx.coroutines.async
 import java.io.InputStream
 import java.net.URL
-import kotlinx.coroutines.async
 
 
 class GridAdapter(context: Context, var mImageList: List<ImagePass>) :
@@ -29,12 +28,14 @@ class GridAdapter(context: Context, var mImageList: List<ImagePass>) :
         }
 
         val image = view?.findViewById<GridViewItem>(R.id.image_view)
+        val progressBar = view?.findViewById<ProgressBar>(R.id.progress_bar)
 
         async {
             val url = URL(imageItem.url)
             val tIstream: InputStream = url.openStream()
             val mBitmap = BitmapFactory.decodeStream(tIstream);
             image?.setImageBitmap(mBitmap)
+            progressBar?.visibility = View.GONE
         }
 
         return view!!
