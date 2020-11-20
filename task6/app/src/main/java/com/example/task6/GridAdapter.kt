@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.ProgressBar
 import android.widget.TextView
 import java.io.InputStream
 import java.net.URL
@@ -28,12 +29,16 @@ class GridAdapter(context: Context, var mImageList: List<ImagePass>) :
         }
 
         val image = view?.findViewById<GridViewItem>(R.id.image_view)
+        val progress = view?.findViewById<ProgressBar>(R.id.ProgressBarHorizontal)
+
+        progress?.visibility = View.VISIBLE
         async {
             val url = URL(imageItem.url)
             val tIstream: InputStream = url.openStream()
             val mBitmap = BitmapFactory.decodeStream(tIstream);
             image?.setImageBitmap(mBitmap)
         }
+        progress?.visibility = View.GONE
 
         return view!!
     }
