@@ -10,4 +10,9 @@
         android:background="@android:color/darker_gray"
         android:scaleType="centerCrop" />
 
+    <ProgressBar
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        />
+
 </RelativeLayout>
