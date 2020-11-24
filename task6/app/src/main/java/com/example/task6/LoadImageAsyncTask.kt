@@ -11,9 +11,9 @@ import java.net.URL
 
 
 class LoadImageAsyncTask(
-    image: GridViewItem?,
-    progressBar: ProgressBar?
-) : AsyncTask<String, Void, Void>() {
+    private val image: GridViewItem?,
+    private val progressBar: ProgressBar?
+) : AsyncTask<String, Void, Bitmap>() {
 
     //メソッドdoInBackgoundの返り値をBitmapには出来ないのか。
     override fun doInBackground(vararg p0: String?): Bitmap {
@@ -24,10 +24,9 @@ class LoadImageAsyncTask(
 
     //どのようにしたらこの場所でimageとprogressBarを使えるのか
     //doInBackgroundで取得したBitmapをどのようにしたらonPostExecuteでセットできるのか
-    override fun onPostExecute(result: Void) {
-        image.setImageBitmap(Bitmap)
+    override fun onPostExecute(result: Bitmap) {
+        image?.setImageBitmap(result)
         progressBar?.visibility = View.GONE
     }
-
 
 }
