@@ -18,6 +18,7 @@ class LoadImageAsyncTask(
     override fun doInBackground(vararg p0: String?): Bitmap {
         val url = URL(p0[0])
         val tIstream: InputStream = url.openStream()
+        
         return BitmapFactory.decodeStream(tIstream);
     }
 
