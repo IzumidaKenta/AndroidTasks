@@ -15,15 +15,12 @@ class LoadImageAsyncTask(
     private val progressBar: ProgressBar?
 ) : AsyncTask<String, Void, Bitmap>() {
 
-    //メソッドdoInBackgoundの返り値をBitmapには出来ないのか。
     override fun doInBackground(vararg p0: String?): Bitmap {
         val url = URL(p0[0])
         val tIstream: InputStream = url.openStream()
         return BitmapFactory.decodeStream(tIstream);
     }
 
-    //どのようにしたらこの場所でimageとprogressBarを使えるのか
-    //doInBackgroundで取得したBitmapをどのようにしたらonPostExecuteでセットできるのか
     override fun onPostExecute(result: Bitmap) {
         image?.setImageBitmap(result)
         progressBar?.visibility = View.GONE
