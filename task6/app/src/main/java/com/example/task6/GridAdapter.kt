@@ -17,11 +17,22 @@ class GridAdapter(context: Context, var mImageList: List<ImagePass>) :
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
         var view = convertView
-        val imageItem= mImageList[position]
+        val imageItem = mImageList[position]
+        val resourceId = imageItem.id
 
         if (convertView == null) {
             view = layoutInflater.inflate(R.layout.grid_items, parent, false)
+            // このViewのResource IDをTagとして持たせておく
+            view.tag = resourceId;
+        } else {
+            // convertViewがnullでなければResource IDを取得する
+            val prevResourceId = view?.tag as Int
+            if (resourceId != prevResourceId) {
+                view = layoutInflater.inflate(R.layout.grid_items, parent, false)
+                view.tag = resourceId
+            }
         }
+
 
         val image = view?.findViewById<GridViewItem>(R.id.image_view)
         val progressBar = view?.findViewById<ProgressBar>(R.id.progress_bar)
