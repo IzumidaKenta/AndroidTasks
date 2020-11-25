@@ -14,7 +14,7 @@
         android:layout_height="40dp"
         android:layout_weight="0.6"
         android:background="@drawable/black_frame"
-        android:digits="abcdefghijklmnopqrstuvwxyz1234567890 "
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
         android:maxLength="6" />
 
     <EditText
@@ -24,7 +24,7 @@
         android:layout_marginLeft="10dp"
         android:layout_weight="0.4"
         android:background="@drawable/black_frame"
-        android:digits="abcdefghijklmnopqrstuvwxyz1234567890 "
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
         android:maxLength="3" />
 
 </LinearLayout>
