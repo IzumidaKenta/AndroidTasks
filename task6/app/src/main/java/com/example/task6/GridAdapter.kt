@@ -46,14 +46,12 @@ class GridAdapter(context: Context, var mImageList: List<ImagePass>) :
         } else {
             println("get!!!!")
             image?.setImageBitmap(cacheImage)
+            progressBar?.visibility = View.GONE
         }
         return view!!
     }
 
     public override fun onTaskFinished(result: Bitmap) {
-        if(imageUrl != "https://raw.githubusercontent.com/IzumidaKenta/AndroidTasks/images/images/AJ6.jpg") {
-            println(imageUrl)
-        }
         BitmapCache.putBitmap(imageUrl, result)
     }
 }
