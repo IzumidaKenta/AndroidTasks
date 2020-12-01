@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter
 import android.widget.ProgressBar
 
 class GridAdapter(context: Context, var mImageList: List<ImagePass>) :
-    ArrayAdapter<ImagePass>(context, 0, mImageList), AsyncTaskCallBacks {
+    ArrayAdapter<ImagePass>(context, 0, mImageList){
 
     private val layoutInflater =
         context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -41,7 +41,7 @@ class GridAdapter(context: Context, var mImageList: List<ImagePass>) :
         val cacheImage = BitmapCache.getBitmap(imageUrl)
 
         if (cacheImage == null) {
-            val loadImageAsyncTask = LoadImageAsyncTask(image, progressBar, this)
+            val loadImageAsyncTask = LoadImageAsyncTask(image, progressBar)
             loadImageAsyncTask.execute(imageItem.url)
         } else {
             println("get!!!!")
@@ -49,9 +49,5 @@ class GridAdapter(context: Context, var mImageList: List<ImagePass>) :
             progressBar?.visibility = View.GONE
         }
         return view!!
-    }
-
-    public override fun onTaskFinished(result: Bitmap) {
-        BitmapCache.putBitmap(imageUrl, result)
     }
 }

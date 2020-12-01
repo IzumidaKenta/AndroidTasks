@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
                                 document.toObject<ImagePass>(ImagePass::class.java)
                             mImageList.add(imagePass)
                         }
-
                         val gridAdapter = GridAdapter(context, mImageList)
                         gridView.adapter = gridAdapter
                     } else {
