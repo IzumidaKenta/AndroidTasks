@@ -1,10 +1,12 @@
 package com.example.task6
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,10 +19,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         makeGridView()
-
+        swipe_container.setOnRefreshListener(OnRefreshListener {
+            // 引っ張って離した時に呼ばれます。
+            makeGridView()
+            swipe_container.isRefreshing = false;
+        })
     }
 
     private fun makeGridView() {
+        mImageList.clear()
         //データベースのimagePassを読み込んでGridViewを生成
         db.collection("imagePass").orderBy("id").get()
             .addOnCompleteListener { task ->
