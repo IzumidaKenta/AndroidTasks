@@ -1,0 +1,4 @@
+#Wed Nov 25 18:26:59 JST 2020
+base.0=/Users/izumidakenta/local/AndroidTasks/survey1/app/build/intermediates/dex/debug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
