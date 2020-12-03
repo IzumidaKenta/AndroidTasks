@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.task6.GridViewItem
+        android:id="@+id/image_view"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@android:color/darker_gray"
+        android:scaleType="centerCrop" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="110dp"
+        android:layout_height="110dp" />
+
+</RelativeLayout>
