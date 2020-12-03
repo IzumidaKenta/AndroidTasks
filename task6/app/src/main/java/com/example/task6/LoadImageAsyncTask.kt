@@ -1,6 +1,5 @@
 package com.example.task6
 
-import android.app.Activity
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.AsyncTask
@@ -18,13 +17,13 @@ class LoadImageAsyncTask(
     override fun doInBackground(vararg p0: String?): Bitmap {
         val url = URL(p0[0])
         val tIstream: InputStream = url.openStream()
-        
-        return BitmapFactory.decodeStream(tIstream);
+        val bitmap = BitmapFactory.decodeStream(tIstream)
+        BitmapCache.putBitmap(p0[0], bitmap)
+        return bitmap
     }
 
     override fun onPostExecute(result: Bitmap) {
         image?.setImageBitmap(result)
         progressBar?.visibility = View.GONE
     }
-
 }

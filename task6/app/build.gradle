@@ -40,4 +40,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-firestore:22.0.0'
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.27.0-eap13"
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
 }
