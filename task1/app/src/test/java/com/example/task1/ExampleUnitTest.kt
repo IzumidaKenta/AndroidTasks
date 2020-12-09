@@ -14,7 +14,9 @@ class NameFormUnitTest {
     @Test
     fun nameFormText_longerThan10characters_ExceptionThrown() {
         val activity:MainActivity = Robolectric.buildActivity(MainActivity::class.java).setup().get()
-        val textLength = activity.findViewById<EditText>(R.id.name_form).text.length
+        val editText: EditText = activity.findViewById<EditText>(R.id.name_form)
+        editText.setText("あいうえお")
+        val textLength = editText.text.length
         assertTrue(textLength < 10)
     }
 }
