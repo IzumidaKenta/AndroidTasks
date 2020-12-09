@@ -1,17 +1,20 @@
 package com.example.task1
-
+import android.os.Build
+import android.widget.EditText
+import org.junit.Assert.assertTrue
 import org.junit.Test
+import org.junit.runner.RunWith
+import org.robolectric.Robolectric
+import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
 
-import org.junit.Assert.*
-
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-class ExampleUnitTest {
+@RunWith(RobolectricTestRunner::class)
+@Config(sdk = [Build.VERSION_CODES.O_MR1])
+class NameFormUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun nameFormText_longerThan10characters_ExceptionThrown() {
+        val activity:MainActivity = Robolectric.buildActivity(MainActivity::class.java).setup().get()
+        val textLength = activity.findViewById<EditText>(R.id.name_form).text.length
+        assertTrue(textLength < 10)
     }
 }
