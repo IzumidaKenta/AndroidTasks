@@ -36,6 +36,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     // Required -- JUnit 4 framework
     testImplementation 'junit:junit:4.12'
+    // Required -- Robolectric
+    testImplementation 'org.robolectric:robolectric:4.3'
     // Optional -- Robolectric environment
     testImplementation 'androidx.test:core:1.0.0'
     // Optional -- Mockito framework
