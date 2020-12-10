@@ -1,23 +1,36 @@
 package com.example.task1
 
-import android.widget.EditText
+import androidx.test.espresso.Espresso.closeSoftKeyboard
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.action.ViewActions.replaceText
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.ActivityTestRule
-import org.junit.Assert.assertTrue
+import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class NameFormInstUnitTest {
+    private lateinit var stringToBetyped: String
     @get:Rule
     val activityRule = ActivityTestRule(MainActivity::class.java)
-
+    @Before
+    fun initValidString() {
+        // Specify a valid string.
+        stringToBetyped = "おはよう"
+    }
     @Test
     fun nameFormText_longerThan10characters_ExceptionThrown() {
-        val activity: MainActivity = activityRule.activity
-        val editText: EditText = activity.findViewById<EditText>(R.id.name_form)
-        val textLength = editText.text.length
-        assertTrue(textLength < 10)
+        onView(withId(R.id.name_form))
+            .perform(replaceText(stringToBetyped))
+        onView(withId(R.id.button)).perform(click())
+        // Check that the text was changed.
+        onView(withId(R.id.mail_address_form))
+            .check(matches(withText(stringToBetyped)))
     }
 }
