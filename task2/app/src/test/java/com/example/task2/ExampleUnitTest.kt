@@ -39,16 +39,19 @@ class ExampleUnitTest {
     }
 
     @Test
-    fun birthdaySpinner_equalToBirthdayConfirmText_ExceptionThrown() {
-        val confirmText: TextView = activity.findViewById<TextView>(R.id.birthday_confirm_text)
+    fun birthdaySpinner_Existence_ExceptionThrown() {
         val birthdayYearSpinner: Spinner =
             activity.findViewById<Spinner>(R.id.birthday_year_spinner)
         val birthdayMonthSpinner: Spinner =
             activity.findViewById<Spinner>(R.id.birthday_month_spinner)
         val birthdayDaySpinner: Spinner = activity.findViewById<Spinner>(R.id.birthday_day_spinner)
 
-        val spinnerText: String = "2000年01月01日"
-        assertEquals(confirmText.text, spinnerText)
+        birthdayYearSpinner.setSelection(20)
+        birthdayMonthSpinner.setSelection(1)
+        birthdayDaySpinner.setSelection(30)
+
+        activity.spinnerCheck(birthdayYearSpinner, birthdayMonthSpinner, birthdayDaySpinner)
+        assertTrue(activity.spinnerCheck(birthdayYearSpinner, birthdayMonthSpinner, birthdayDaySpinner))
     }
 
     @Test

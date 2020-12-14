@@ -11,9 +11,7 @@ import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.DateFormat
-import java.text.ParseException
 import java.text.SimpleDateFormat
-import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -131,12 +129,13 @@ class MainActivity : AppCompatActivity() {
         val birthdayDayString: String = birthday_day_spinner.selectedItem as String
 
         val birthdayString = "$birthdayYearString/$birthdayMonthString/$birthdayDayString"
+        println(birthdayString)
         return checkDate(birthdayString)
     }
 
 
     private fun checkDate(strDate: String?): Boolean {
-        val format: DateFormat = DateFormat.getDateInstance()
+        val format = SimpleDateFormat("yyyy/mm/dd")
         format.isLenient = false
         return try {
             format.parse(strDate)
