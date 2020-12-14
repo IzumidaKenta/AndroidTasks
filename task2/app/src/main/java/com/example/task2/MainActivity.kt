@@ -44,10 +44,10 @@ class MainActivity : AppCompatActivity() {
         address_form.setOnTouchListener(listener)
 
         send_button.setOnClickListener {
-            textLongerThan10characters(name_form)
-            textLongerThan10characters(mail_address_form)
-            textLongerThan20characters(address_form)
-            textLongerThan20characters(memo_form)
+            textLongerThanLimit(name_form, 10)
+            textLongerThanLimit(mail_address_form, 10)
+            textLongerThanLimit(address_form, 20)
+            textLongerThanLimit(memo_form, 30)
         }
     }
 
@@ -108,11 +108,8 @@ class MainActivity : AppCompatActivity() {
         return super.dispatchTouchEvent(ev)
     }
 
-    fun textLongerThan10characters(editText: EditText): Boolean {
-        return editText.text.length < 10
+    fun textLongerThanLimit(editText: EditText, limit: Int): Boolean {
+        return editText.text.length < limit
     }
 
-    fun textLongerThan20characters(editText: EditText): Boolean {
-        return editText.text.length < 20
-    }
 }
