@@ -1,6 +1,6 @@
 package com.example.task2
 
-import android.app.Activity
+import android.R.attr.button
 import android.content.Context
 import android.os.Bundle
 import android.view.MotionEvent
@@ -42,6 +42,13 @@ class MainActivity : AppCompatActivity() {
         }
         memo_form.setOnTouchListener(listener)
         address_form.setOnTouchListener(listener)
+
+        send_button.setOnClickListener {
+            textLongerThan10characters(name_form)
+            textLongerThan10characters(mail_address_form)
+            textLongerThan20characters(address_form)
+            textLongerThan20characters(memo_form)
+        }
     }
 
     private fun spinnerFunc(spinner: Spinner, array: Int) {
