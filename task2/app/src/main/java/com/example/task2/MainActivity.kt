@@ -100,4 +100,12 @@ class MainActivity : AppCompatActivity() {
         scrollView.requestFocus()
         return super.dispatchTouchEvent(ev)
     }
+
+    fun textLongerThan10characters(editText: EditText): Boolean {
+        return editText.text.length < 10
+    }
+
+    fun textLongerThan20characters(editText: EditText): Boolean {
+        return editText.text.length < 20
+    }
 }
