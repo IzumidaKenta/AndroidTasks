@@ -1,6 +1,5 @@
 package com.example.task2
 
-import android.R.attr.button
 import android.content.Context
 import android.os.Bundle
 import android.view.MotionEvent
@@ -8,10 +7,13 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.EditText
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import java.text.DateFormat
+import java.text.ParseException
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -45,10 +47,11 @@ class MainActivity : AppCompatActivity() {
 
         send_button.setOnClickListener {
             if (!
-                textLongerThanLimit(name_form.text.toString(), 10) &&
-                textLongerThanLimit(mail_address_form.text.toString(), 10) &&
-                textLongerThanLimit(address_form.text.toString(), 20) &&
-                textLongerThanLimit(memo_form.text.toString(), 30)
+                textLongerThanLimit(name_form.text.toString(), 10) ||
+                textLongerThanLimit(mail_address_form.text.toString(), 10) ||
+                textLongerThanLimit(address_form.text.toString(), 20) ||
+                textLongerThanLimit(memo_form.text.toString(), 30) ||
+                spinnerCheck(birthday_year_spinner, birthday_month_spinner, birthday_day_spinner)
             ) {
                 println("バリデーションエラー")
                 return@setOnClickListener
@@ -116,6 +119,31 @@ class MainActivity : AppCompatActivity() {
 
     fun textLongerThanLimit(text: String, limit: Int): Boolean {
         return text.length < limit
+    }
+
+    fun spinnerCheck(
+        birthday_year_spinner: Spinner,
+        birthday_month_spinner: Spinner,
+        birthday_day_spinner: Spinner
+    ): Boolean {
+        val birthdayYearString: String = birthday_year_spinner.selectedItem as String
+        val birthdayMonthString: String = birthday_month_spinner.selectedItem as String
+        val birthdayDayString: String = birthday_day_spinner.selectedItem as String
+
+        val birthdayString = "$birthdayYearString/$birthdayMonthString/$birthdayDayString"
+        return checkDate(birthdayString)
+    }
+
+
+    private fun checkDate(strDate: String?): Boolean {
+        val format: DateFormat = DateFormat.getDateInstance()
+        format.isLenient = false
+        return try {
+            format.parse(strDate)
+            true
+        } catch (e: Exception) {
+            false
+        }
     }
 
 }
