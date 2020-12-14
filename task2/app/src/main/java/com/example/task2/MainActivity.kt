@@ -43,16 +43,16 @@ class MainActivity : AppCompatActivity() {
         address_form.setOnTouchListener(listener)
 
         send_button.setOnClickListener {
-            if (!textLongerThanLimit(name_form.text.toString(), 10) ||
-                !textLongerThanLimit(mail_address_form.text.toString(), 10) ||
-                !textLongerThanLimit(address_form.text.toString(), 20) ||
-                !textLongerThanLimit(memo_form.text.toString(), 30) ||
+            if (!textLimitAndMin(name_form.text.toString(), 10, 1) ||
+                !textLimitAndMin(mail_address_form.text.toString(), 10, 1) ||
+                !textLimitAndMin(address_form.text.toString(), 20, 1) ||
+                !textLimitAndMin(memo_form.text.toString(), 30, 1) ||
                 !spinnerCheck(birthday_year_spinner, birthday_month_spinner, birthday_day_spinner)
             ) {
                 AlertDialog.Builder(this)
                     .setTitle("バリデーションエラー")
                     .setMessage("入力し直してください")
-                    .setPositiveButton("OK"){ _, _ -> }
+                    .setPositiveButton("OK") { _, _ -> }
                     .show()
                 return@setOnClickListener
             } else {
@@ -119,8 +119,8 @@ class MainActivity : AppCompatActivity() {
         return super.dispatchTouchEvent(ev)
     }
 
-    fun textLongerThanLimit(text: String, limit: Int): Boolean {
-        return text.length < limit
+    fun textLimitAndMin(text: String, limit: Int, min: Int): Boolean {
+        return text.length < limit && text.length > min
     }
 
     fun spinnerCheck(
