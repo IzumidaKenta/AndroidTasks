@@ -29,9 +29,9 @@ class MainActivity : AppCompatActivity() {
         val birthdayMonthSpinner: Spinner = findViewById(R.id.birthday_month_spinner)
         val birthdayDaySpinner: Spinner = findViewById(R.id.birthday_day_spinner)
 
-        spinnerFunc(birthdayYearSpinner, R.array.birthday_year_spinner_values)
-        spinnerFunc(birthdayMonthSpinner, R.array.birthday_month_spinner_values)
-        spinnerFunc(birthdayDaySpinner, R.array.birthday_day_spinner_values)
+        spinnerDataSetFunc(birthdayYearSpinner, R.array.birthday_year_spinner_values)
+        spinnerDataSetFunc(birthdayMonthSpinner, R.array.birthday_month_spinner_values)
+        spinnerDataSetFunc(birthdayDaySpinner, R.array.birthday_day_spinner_values)
 
         val listener: View.OnTouchListener = View.OnTouchListener { v, event ->
             v.parent.requestDisallowInterceptTouchEvent(true)
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun spinnerFunc(spinner: Spinner, array: Int) {
+    private fun spinnerDataSetFunc(spinner: Spinner, array: Int) {
         ArrayAdapter.createFromResource(
             this,
             array, android.R.layout.simple_spinner_item
