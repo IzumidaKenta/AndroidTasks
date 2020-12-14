@@ -10,8 +10,6 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import java.text.DateFormat
-import java.text.SimpleDateFormat
 
 
 class MainActivity : AppCompatActivity() {
@@ -44,12 +42,11 @@ class MainActivity : AppCompatActivity() {
         address_form.setOnTouchListener(listener)
 
         send_button.setOnClickListener {
-            if (!
-                textLongerThanLimit(name_form.text.toString(), 10) ||
-                textLongerThanLimit(mail_address_form.text.toString(), 10) ||
-                textLongerThanLimit(address_form.text.toString(), 20) ||
-                textLongerThanLimit(memo_form.text.toString(), 30) ||
-                spinnerCheck(birthday_year_spinner, birthday_month_spinner, birthday_day_spinner)
+            if (!textLongerThanLimit(name_form.text.toString(), 10) ||
+                !textLongerThanLimit(mail_address_form.text.toString(), 10) ||
+                !textLongerThanLimit(address_form.text.toString(), 20) ||
+                !textLongerThanLimit(memo_form.text.toString(), 30) ||
+                !spinnerCheck(birthday_year_spinner, birthday_month_spinner, birthday_day_spinner)
             ) {
                 println("バリデーションエラー")
                 return@setOnClickListener
@@ -130,19 +127,40 @@ class MainActivity : AppCompatActivity() {
 
         val birthdayString = "$birthdayYearString/$birthdayMonthString/$birthdayDayString"
         println(birthdayString)
-        return checkDate(birthdayString)
-    }
 
-
-    private fun checkDate(strDate: String?): Boolean {
-        val format = SimpleDateFormat("yyyy/mm/dd")
-        format.isLenient = false
-        return try {
-            format.parse(strDate)
-            true
-        } catch (e: Exception) {
-            false
+        if (!isLeapYear(birthdayYearString) && (birthdayDayString == "29" || birthdayDayString == "30" || birthdayDayString == "31")) {
+            return false
         }
+        return true
     }
+
+    private fun isLeapYear(year: String): Boolean {
+        println(year)
+        val year = year.toInt()
+        var isLeapYear: Boolean = false
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    isLeapYear = true // うるう年
+                }
+            } else {
+                isLeapYear = true // うるう年
+            }
+        }
+        return isLeapYear
+    }
+
+
+//    private fun checkDate(strDate: String): Boolean {
+//        val format = DateFormat.getDateInstance()
+//        format.isLenient = false
+//        println(strDate)
+//        return try {
+//            format.parse(strDate)
+//            true
+//        } catch (e: Exception) {
+//            false
+//        }
+//    }
 
 }
