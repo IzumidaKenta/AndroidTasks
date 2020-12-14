@@ -8,6 +8,8 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -47,8 +49,14 @@ class MainActivity : AppCompatActivity() {
                 !textLongerThanLimit(memo_form.text.toString(), 30) ||
                 !spinnerCheck(birthday_year_spinner, birthday_month_spinner, birthday_day_spinner)
             ) {
-                println("バリデーションエラー")
+                AlertDialog.Builder(this)
+                    .setTitle("バリデーションエラー")
+                    .setMessage("入力し直してください")
+                    .setPositiveButton("OK"){ _, _ -> }
+                    .show()
                 return@setOnClickListener
+            } else {
+                Toast.makeText(applicationContext, "送信完了", Toast.LENGTH_LONG).show()
             }
 
         }
