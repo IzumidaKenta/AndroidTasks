@@ -46,11 +46,17 @@ class ExampleUnitTest {
             activity.findViewById<Spinner>(R.id.birthday_month_spinner)
         val birthdayDaySpinner: Spinner = activity.findViewById<Spinner>(R.id.birthday_day_spinner)
 
-        birthdayYearSpinner.setSelection(18)
-        birthdayMonthSpinner.setSelection(1)
-        birthdayDaySpinner.setSelection(28)
+        birthdayYearSpinner.setSelection(19)
+        birthdayMonthSpinner.setSelection(7)
+        birthdayDaySpinner.setSelection(7)
 
-        assertTrue(activity.spinnerCheck(birthdayYearSpinner, birthdayMonthSpinner, birthdayDaySpinner))
+        assertTrue(
+            activity.spinnerCheck(
+                birthdayYearSpinner,
+                birthdayMonthSpinner,
+                birthdayDaySpinner
+            )
+        )
     }
 
     @Test

@@ -11,7 +11,6 @@ import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
-
 class MainActivity : AppCompatActivity() {
 
     var birthday: String = ""
@@ -121,21 +120,36 @@ class MainActivity : AppCompatActivity() {
         birthday_month_spinner: Spinner,
         birthday_day_spinner: Spinner
     ): Boolean {
+
+        var result = true
         val birthdayYearString: String = birthday_year_spinner.selectedItem as String
         val birthdayMonthString: String = birthday_month_spinner.selectedItem as String
         val birthdayDayString: String = birthday_day_spinner.selectedItem as String
 
-        val birthdayString = "$birthdayYearString/$birthdayMonthString/$birthdayDayString"
-        println(birthdayString)
-
-        if (!isLeapYear(birthdayYearString) && (birthdayDayString == "29" || birthdayDayString == "30" || birthdayDayString == "31")) {
-            return false
+        if (isLeapYear(birthdayYearString) && birthdayMonthString == "02") {
+            if (birthdayDayString == "30" || birthdayDayString == "31") {
+                result = false
+            }
+        } else {
+            if (birthdayDayString == "29" || birthdayDayString == "30" || birthdayDayString == "31") {
+                result = false
+            }
         }
-        return true
+
+        if (birthdayMonthString == "04" && birthdayDayString == "31") {
+            result = false
+        } else if (birthdayMonthString == "06" && birthdayDayString == "31") {
+            result = false
+        } else if (birthdayMonthString == "09" && birthdayDayString == "31") {
+            result = false
+        } else if (birthdayMonthString == "11" && birthdayDayString == "31") {
+            result = false
+        }
+
+        return result
     }
 
     private fun isLeapYear(year: String): Boolean {
-        println(year)
         val year = year.toInt()
         var isLeapYear: Boolean = false
         if (year % 4 == 0) {
@@ -149,18 +163,6 @@ class MainActivity : AppCompatActivity() {
         }
         return isLeapYear
     }
-
-
-//    private fun checkDate(strDate: String): Boolean {
-//        val format = DateFormat.getDateInstance()
-//        format.isLenient = false
-//        println(strDate)
-//        return try {
-//            format.parse(strDate)
-//            true
-//        } catch (e: Exception) {
-//            false
-//        }
-//    }
-
 }
+
+
