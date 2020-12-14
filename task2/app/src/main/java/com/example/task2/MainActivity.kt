@@ -44,10 +44,16 @@ class MainActivity : AppCompatActivity() {
         address_form.setOnTouchListener(listener)
 
         send_button.setOnClickListener {
-            textLongerThanLimit(name_form.text.toString(), 10)
-            textLongerThanLimit(mail_address_form.text.toString(), 10)
-            textLongerThanLimit(address_form.text.toString(), 20)
-            textLongerThanLimit(memo_form.text.toString(), 30)
+            if (!
+                textLongerThanLimit(name_form.text.toString(), 10) &&
+                textLongerThanLimit(mail_address_form.text.toString(), 10) &&
+                textLongerThanLimit(address_form.text.toString(), 20) &&
+                textLongerThanLimit(memo_form.text.toString(), 30)
+            ) {
+                println("バリデーションエラー")
+                return@setOnClickListener
+            }
+
         }
     }
 
