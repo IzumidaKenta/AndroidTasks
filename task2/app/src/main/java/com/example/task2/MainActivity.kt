@@ -46,28 +46,37 @@ class MainActivity : AppCompatActivity() {
         address_form.setOnTouchListener(listener)
 
         send_button.setOnClickListener {
-            if (!textLimitAndMin(name_form.text.toString(), 10, 0) ||
-                !textLimitAndMin(mail_address_form.text.toString(), 40, 0) ||
-                !textLimitAndMin(address_form.text.toString(), 20, 0) ||
-                !textLimitAndMin(memo_form.text.toString(), 30, 0) ||
-                !spinnerCheck(
+            if (!textLimitAndMin(name_form.text.toString(), 10, 0)) {
+                alertDialog("名前入力エラー")
+                return@setOnClickListener
+            }
+            if (!textLimitAndMin(mail_address_form.text.toString(), 40, 0)) {
+                alertDialog("メールアドレス入力エラー")
+                return@setOnClickListener
+            }
+            if (!textLimitAndMin(address_form.text.toString(), 20, 0)) {
+                alertDialog("住所入力エラー")
+                return@setOnClickListener
+            }
+            if (!textLimitAndMin(memo_form.text.toString(), 30, 0)) {
+                alertDialog("メモ入力エラー")
+                return@setOnClickListener
+            }
+            if (!spinnerCheck(
                     birthday_year_spinner,
                     birthday_month_spinner,
                     birthday_day_spinner
                 )
-                ||
-                !mailValidation(mail_address_form.text.toString())
             ) {
-                AlertDialog.Builder(this)
-                    .setTitle("バリデーションエラー")
-                    .setMessage("入力し直してください")
-                    .setPositiveButton("OK") { _, _ -> }
-                    .show()
+                alertDialog("誕生日エラー")
                 return@setOnClickListener
-            } else {
-                Toast.makeText(applicationContext, "送信完了", Toast.LENGTH_LONG).show()
+            }
+            if (!mailValidation(mail_address_form.text.toString())) {
+                alertDialog("メールアドレスエラー")
+                return@setOnClickListener
             }
 
+            Toast.makeText(applicationContext, "送信完了", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -186,6 +195,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return isLeapYear
+    }
+
+    private fun alertDialog(title: String) {
+        AlertDialog.Builder(this)
+            .setTitle(title)
+            .setMessage("入力し直してください")
+            .setPositiveButton("OK") { _, _ -> }
+            .show()
     }
 }
 
