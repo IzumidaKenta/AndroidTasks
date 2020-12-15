@@ -128,7 +128,7 @@ class MainActivity : AppCompatActivity() {
         return super.dispatchTouchEvent(ev)
     }
 
-    private fun textLimitAndMin(text: String, limit: Int, min: Int): Boolean {
+    fun textLimitAndMin(text: String, limit: Int, min: Int): Boolean {
         return text.length < limit && text.length > min
     }
 
