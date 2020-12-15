@@ -1,5 +1,6 @@
 package com.example.task2
 
+import android.R.array
 import android.content.Context
 import android.os.Bundle
 import android.view.MotionEvent
@@ -12,6 +13,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.regex.Pattern
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -43,11 +46,17 @@ class MainActivity : AppCompatActivity() {
         address_form.setOnTouchListener(listener)
 
         send_button.setOnClickListener {
-            if (!textLimitAndMin(name_form.text.toString(), 10, 1) ||
-                !textLimitAndMin(mail_address_form.text.toString(), 10, 1) ||
-                !textLimitAndMin(address_form.text.toString(), 20, 1) ||
-                !textLimitAndMin(memo_form.text.toString(), 30, 1) ||
-                !spinnerCheck(birthday_year_spinner, birthday_month_spinner, birthday_day_spinner)
+            if (!textLimitAndMin(name_form.text.toString(), 10, 0) ||
+                !textLimitAndMin(mail_address_form.text.toString(), 40, 0) ||
+                !textLimitAndMin(address_form.text.toString(), 20, 0) ||
+                !textLimitAndMin(memo_form.text.toString(), 30, 0) ||
+                !spinnerCheck(
+                    birthday_year_spinner,
+                    birthday_month_spinner,
+                    birthday_day_spinner
+                )
+                ||
+                !mailValidation(mail_address_form.text.toString())
             ) {
                 AlertDialog.Builder(this)
                     .setTitle("バリデーションエラー")
@@ -119,8 +128,15 @@ class MainActivity : AppCompatActivity() {
         return super.dispatchTouchEvent(ev)
     }
 
-    fun textLimitAndMin(text: String, limit: Int, min: Int): Boolean {
+    private fun textLimitAndMin(text: String, limit: Int, min: Int): Boolean {
         return text.length < limit && text.length > min
+    }
+
+    private fun mailValidation(text: String): Boolean {
+        val pattern =
+            "^([a-zA-Z0-9])+([a-zA-Z0-9\\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\\._-]+)+$"
+        val p: Pattern = Pattern.compile(pattern)
+        return p.matcher(text).find()
     }
 
     fun spinnerCheck(
