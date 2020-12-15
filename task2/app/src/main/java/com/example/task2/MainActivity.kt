@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         val birthdayYearSpinner: Spinner = findViewById(R.id.birthday_year_spinner)
         val birthdayMonthSpinner: Spinner = findViewById(R.id.birthday_month_spinner)
         val birthdayDaySpinner: Spinner = findViewById(R.id.birthday_day_spinner)
+        var validationError: Boolean
 
         spinnerDataSetFunc(birthdayYearSpinner, R.array.birthday_year_spinner_values)
         spinnerDataSetFunc(birthdayMonthSpinner, R.array.birthday_month_spinner_values)
@@ -43,53 +44,33 @@ class MainActivity : AppCompatActivity() {
         address_form.setOnTouchListener(listener)
 
         send_button.setOnClickListener {
-            if (!isTyped(name_form)) {
-                alertDialog("名前未入力", "名前を入力して下さい")
-                return@setOnClickListener
-            }
-            if (!isTyped(mail_address_form)) {
-                alertDialog("メールアドレス未入力", "メールアドレスを入力して下さい")
-                return@setOnClickListener
-            }
-            if (!isTyped(address_form)) {
-                alertDialog("住所未入力", "住所を入力して下さい")
-                return@setOnClickListener
-            }
-            if (!isTyped(memo_form)) {
-                alertDialog("メモ未入力", "メモを入力して下さい")
-                return@setOnClickListener
-            }
-            if (!textLimit(name_form.text.toString(), 10)) {
-                alertDialog("名前入力エラー", "10文字の文字数制限を超えています")
-                return@setOnClickListener
-            }
-            if (!textLimit(mail_address_form.text.toString(), 40)) {
-                alertDialog("メールアドレス入力エラー", "40文字の文字数制限を超えています")
-                return@setOnClickListener
-            }
-            if (!textLimit(address_form.text.toString(), 20)) {
-                alertDialog("住所入力エラー", "20文字の文字数制限を超えています")
-                return@setOnClickListener
-            }
-            if (!textLimit(memo_form.text.toString(), 30)) {
-                alertDialog("メモ入力エラー", "30文字の文字数制限を超えています")
-                return@setOnClickListener
-            }
-            if (!spinnerCheck(
+            validationError = alertDialog((isTyped(name_form)), "名前未入力", "名前を入力して下さい")
+            validationError = alertDialog(isTyped(mail_address_form), "メールアドレス未入力", "メールアドレスを入力して下さい")
+            validationError = alertDialog(isTyped(address_form), "住所未入力", "住所を入力して下さい")
+            validationError = alertDialog(isTyped(memo_form), "メモ未入力", "メモを入力して下さい")
+            validationError = alertDialog(textLimit(name_form.text.toString(), 10), "名前入力エラー", "10文字の文字数制限を超えています")
+            validationError = alertDialog(
+                textLimit(mail_address_form.text.toString(), 40),
+                "メールアドレス入力エラー",
+                "40文字の文字数制限を超えています"
+            )
+            validationError = alertDialog(textLimit(address_form.text.toString(), 20), "住所入力エラー", "20文字の文字数制限を超えています")
+            validationError = alertDialog(textLimit(memo_form.text.toString(), 30), "メモ入力エラー", "30文字の文字数制限を超えています")
+            validationError = alertDialog(
+                spinnerCheck(
                     birthday_year_spinner,
                     birthday_month_spinner,
                     birthday_day_spinner
-                )
-            ) {
-                alertDialog("誕生日エラー", "存在しない日です")
-                return@setOnClickListener
+                ), "誕生日エラー", "存在しない日です"
+            )
+            validationError = alertDialog(
+                mailValidation(mail_address_form.text.toString()),
+                "メールアドレスエラー",
+                "正しいメールアドレスを入力して下さい"
+            )
+            if(!validationError) {
+                Toast.makeText(applicationContext, "送信完了", Toast.LENGTH_LONG).show()
             }
-            if (!mailValidation(mail_address_form.text.toString())) {
-                alertDialog("メールアドレスエラー", "正しいメールアドレスを入力して下さい")
-                return@setOnClickListener
-            }
-
-            Toast.makeText(applicationContext, "送信完了", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -214,12 +195,16 @@ class MainActivity : AppCompatActivity() {
         return isLeapYear
     }
 
-    private fun alertDialog(title: String, message: String) {
-        AlertDialog.Builder(this)
-            .setTitle(title)
-            .setMessage(message)
-            .setPositiveButton("OK") { _, _ -> }
-            .show()
+    private fun alertDialog(checkBool: Boolean, title: String, message: String): Boolean {
+        if (!checkBool) {
+            AlertDialog.Builder(this)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("OK") { _, _ -> }
+                .show()
+            return true
+        }
+        return false
     }
 }
 
