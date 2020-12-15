@@ -6,10 +6,7 @@ import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -46,20 +43,36 @@ class MainActivity : AppCompatActivity() {
         address_form.setOnTouchListener(listener)
 
         send_button.setOnClickListener {
-            if (!textLimitAndMin(name_form.text.toString(), 10, 0)) {
-                alertDialog("名前入力エラー")
+            if (!isTyped(name_form)) {
+                alertDialog("名前入力エラー", "名前を入力して下さい")
                 return@setOnClickListener
             }
-            if (!textLimitAndMin(mail_address_form.text.toString(), 40, 0)) {
-                alertDialog("メールアドレス入力エラー")
+            if (!isTyped(mail_address_form)) {
+                alertDialog("メールアドレスエラー", "メールアドレスを入力して下さい")
                 return@setOnClickListener
             }
-            if (!textLimitAndMin(address_form.text.toString(), 20, 0)) {
-                alertDialog("住所入力エラー")
+            if (!isTyped(address_form)) {
+                alertDialog("住所入力エラー", "住所を入力して下さい")
                 return@setOnClickListener
             }
-            if (!textLimitAndMin(memo_form.text.toString(), 30, 0)) {
-                alertDialog("メモ入力エラー")
+            if (!isTyped(memo_form)) {
+                alertDialog("メモ入力エラー", "メモを入力して下さい")
+                return@setOnClickListener
+            }
+            if (!textLimit(name_form.text.toString(), 10)) {
+                alertDialog("名前入力エラー", "10文字の文字数制限を超えています")
+                return@setOnClickListener
+            }
+            if (!textLimit(mail_address_form.text.toString(), 40)) {
+                alertDialog("メールアドレス入力エラー", "40文字の文字数制限を超えています")
+                return@setOnClickListener
+            }
+            if (!textLimit(address_form.text.toString(), 20)) {
+                alertDialog("住所入力エラー", "20文字の文字数制限を超えています")
+                return@setOnClickListener
+            }
+            if (!textLimit(memo_form.text.toString(), 30)) {
+                alertDialog("メモ入力エラー", "30文字の文字数制限を超えています")
                 return@setOnClickListener
             }
             if (!spinnerCheck(
@@ -68,11 +81,11 @@ class MainActivity : AppCompatActivity() {
                     birthday_day_spinner
                 )
             ) {
-                alertDialog("誕生日エラー")
+                alertDialog("誕生日エラー", "存在しない日です")
                 return@setOnClickListener
             }
             if (!mailValidation(mail_address_form.text.toString())) {
-                alertDialog("メールアドレスエラー")
+                alertDialog("メールアドレスエラー", "正しいメールアドレスを入力して下さい")
                 return@setOnClickListener
             }
 
@@ -137,8 +150,12 @@ class MainActivity : AppCompatActivity() {
         return super.dispatchTouchEvent(ev)
     }
 
-    fun textLimitAndMin(text: String, limit: Int, min: Int): Boolean {
-        return text.length < limit && text.length > min
+    fun textLimit(text: String, limit: Int): Boolean {
+        return text.length < limit
+    }
+
+    fun isTyped(editText: EditText): Boolean {
+        return editText.text.toString().isNotEmpty()
     }
 
     private fun mailValidation(text: String): Boolean {
@@ -197,10 +214,10 @@ class MainActivity : AppCompatActivity() {
         return isLeapYear
     }
 
-    private fun alertDialog(title: String) {
+    private fun alertDialog(title: String, message: String) {
         AlertDialog.Builder(this)
             .setTitle(title)
-            .setMessage("入力し直してください")
+            .setMessage(message)
             .setPositiveButton("OK") { _, _ -> }
             .show()
     }
