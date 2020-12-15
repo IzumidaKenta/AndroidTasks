@@ -44,19 +44,19 @@ class MainActivity : AppCompatActivity() {
 
         send_button.setOnClickListener {
             if (!isTyped(name_form)) {
-                alertDialog("名前入力エラー", "名前を入力して下さい")
+                alertDialog("名前未入力", "名前を入力して下さい")
                 return@setOnClickListener
             }
             if (!isTyped(mail_address_form)) {
-                alertDialog("メールアドレスエラー", "メールアドレスを入力して下さい")
+                alertDialog("メールアドレス未入力", "メールアドレスを入力して下さい")
                 return@setOnClickListener
             }
             if (!isTyped(address_form)) {
-                alertDialog("住所入力エラー", "住所を入力して下さい")
+                alertDialog("住所未入力", "住所を入力して下さい")
                 return@setOnClickListener
             }
             if (!isTyped(memo_form)) {
-                alertDialog("メモ入力エラー", "メモを入力して下さい")
+                alertDialog("メモ未入力", "メモを入力して下さい")
                 return@setOnClickListener
             }
             if (!textLimit(name_form.text.toString(), 10)) {
