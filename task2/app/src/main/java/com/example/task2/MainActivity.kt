@@ -1,6 +1,7 @@
 package com.example.task2
 
 import android.content.Context
+import android.media.session.PlaybackState
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
@@ -9,6 +10,7 @@ import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import java.lang.reflect.Array
 import java.util.regex.Pattern
 
 
@@ -41,8 +43,14 @@ class MainActivity : AppCompatActivity() {
         memo_form.setOnTouchListener(listener)
         address_form.setOnTouchListener(listener)
 
+        var validateLists: ArrayList<CustomClass> = ArrayList()
+        validateLists.add(CustomClass("名前", name_form, 10))
+        validateLists.add((CustomClass("メールアドレス", mail_address_form, 40)))
+        validateLists.add(CustomClass("住所", address_form, 20))
+        validateLists.add(CustomClass("メモ", memo_form, 30))
+
         send_button.setOnClickListener {
-            val ret = validateCheck()
+            val ret = validateCheck(validateLists)
             if (ret.isNotEmpty()) {
                 alertDialog(ret[0], ret[1])
                 return@setOnClickListener
@@ -189,43 +197,31 @@ class MainActivity : AppCompatActivity() {
             .show()
     }
 
-    private fun validateCheck(): List<String> {
-        val validateLists: List<Boolean> = listOf(
-            isTyped(name_form),
-            isTyped(mail_address_form),
-            isTyped(address_form),
-            isTyped(memo_form),
-            textLimit(name_form.text.toString(), 10),
-            textLimit(mail_address_form.text.toString(), 40),
-            textLimit(address_form.text.toString(), 20),
-            textLimit(memo_form.text.toString(), 30),
-            mailValidation(mail_address_form.text.toString())
-        )
-
-        val alertTitleList: List<String> = listOf(
-            "名前未入力", "メールアドレス未入力", "住所未入力", "メモ未入力", "名前入力エラー", "メールアドレス入力エラー", "住所入力エラー",
-            "メモ入力エラー", "メールアドレスエラー"
-        )
-        val alertMessageList: List<String> = listOf(
-            "名前を入力して下さい",
-            "メールアドレスを入力して下さい",
-            "住所を入力して下さい",
-            "メモを入力して下さい",
-            "10文字の文字数制限を超えています",
-            "40文字の文字数制限を超えています",
-            "20文字の文字数制限を超えています",
-            "30文字の文字数制限を超えています",
-            "正しいメールアドレスを入力して下さい"
-        )
-
-        var count = 0
-        for (item in validateLists) {
-            if (!item) {
-                return listOf(alertTitleList[count], alertMessageList[count])
+    private fun validateCheck(lists: ArrayList<CustomClass>): List<String> {
+        val ret: ArrayList<String> = ArrayList()
+        for (list in lists) {
+            if (!isTyped(list.editText)) {
+                ret.add(list.name + "入力エラー")
+                ret.add(list.name + "を入力して下さい")
+                return ret
             }
-            count += 1
+            if (!textLimit(list.editText.text.toString(), list.length)) {
+                ret.add(list.name + "入力エラー")
+                ret.add(list.length.toString() + "文字の文字数制限を超えています")
+                return ret
+            }
+            if (list.name == "メールアドレス") {
+                if (!mailValidation(list.editText.text.toString())) {
+                    ret.add(list.name + "エラー")
+                    ret.add("正しいメールアドレスを入力して下さい")
+                    return ret
+                }
+            }
         }
-        return listOf()
+        return ret
+    }
+
+    class CustomClass(val name: String, val editText: EditText, val length: Int) {
     }
 }
 
