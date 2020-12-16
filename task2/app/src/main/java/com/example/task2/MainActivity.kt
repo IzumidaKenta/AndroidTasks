@@ -197,7 +197,7 @@ class MainActivity : AppCompatActivity() {
             .show()
     }
 
-    private fun validateCheck(lists: ArrayList<CustomClass>): List<String> {
+    fun validateCheck(lists: ArrayList<CustomClass>): List<String> {
         val ret: ArrayList<String> = ArrayList()
         for (list in lists) {
             if (!isTyped(list.editText)) {
