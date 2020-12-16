@@ -1,6 +1,5 @@
 package com.example.task2
 
-import android.R.array
 import android.content.Context
 import android.os.Bundle
 import android.view.MotionEvent
@@ -27,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         val birthdayYearSpinner: Spinner = findViewById(R.id.birthday_year_spinner)
         val birthdayMonthSpinner: Spinner = findViewById(R.id.birthday_month_spinner)
         val birthdayDaySpinner: Spinner = findViewById(R.id.birthday_day_spinner)
-        var validationError: Boolean
 
         spinnerDataSetFunc(birthdayYearSpinner, R.array.birthday_year_spinner_values)
         spinnerDataSetFunc(birthdayMonthSpinner, R.array.birthday_month_spinner_values)
@@ -44,33 +42,21 @@ class MainActivity : AppCompatActivity() {
         address_form.setOnTouchListener(listener)
 
         send_button.setOnClickListener {
-            validationError = alertDialog((isTyped(name_form)), "名前未入力", "名前を入力して下さい")
-            validationError = alertDialog(isTyped(mail_address_form), "メールアドレス未入力", "メールアドレスを入力して下さい")
-            validationError = alertDialog(isTyped(address_form), "住所未入力", "住所を入力して下さい")
-            validationError = alertDialog(isTyped(memo_form), "メモ未入力", "メモを入力して下さい")
-            validationError = alertDialog(textLimit(name_form.text.toString(), 10), "名前入力エラー", "10文字の文字数制限を超えています")
-            validationError = alertDialog(
-                textLimit(mail_address_form.text.toString(), 40),
-                "メールアドレス入力エラー",
-                "40文字の文字数制限を超えています"
-            )
-            validationError = alertDialog(textLimit(address_form.text.toString(), 20), "住所入力エラー", "20文字の文字数制限を超えています")
-            validationError = alertDialog(textLimit(memo_form.text.toString(), 30), "メモ入力エラー", "30文字の文字数制限を超えています")
-            validationError = alertDialog(
-                spinnerCheck(
+            val ret = validateCheck()
+            if (ret.isNotEmpty()) {
+                alertDialog(ret[0], ret[1])
+                return@setOnClickListener
+            }
+            if (!spinnerCheck(
                     birthday_year_spinner,
                     birthday_month_spinner,
                     birthday_day_spinner
-                ), "誕生日エラー", "存在しない日です"
-            )
-            validationError = alertDialog(
-                mailValidation(mail_address_form.text.toString()),
-                "メールアドレスエラー",
-                "正しいメールアドレスを入力して下さい"
-            )
-            if(!validationError) {
-                Toast.makeText(applicationContext, "送信完了", Toast.LENGTH_LONG).show()
+                )
+            ) {
+                alertDialog("誕生日エラー", "存在しない日です")
+                return@setOnClickListener
             }
+            Toast.makeText(applicationContext, "送信完了", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -195,16 +181,51 @@ class MainActivity : AppCompatActivity() {
         return isLeapYear
     }
 
-    private fun alertDialog(checkBool: Boolean, title: String, message: String): Boolean {
-        if (!checkBool) {
-            AlertDialog.Builder(this)
-                .setTitle(title)
-                .setMessage(message)
-                .setPositiveButton("OK") { _, _ -> }
-                .show()
-            return true
+    private fun alertDialog(title: String, message: String) {
+        AlertDialog.Builder(this)
+            .setTitle(title)
+            .setMessage(message)
+            .setPositiveButton("OK") { _, _ -> }
+            .show()
+    }
+
+    private fun validateCheck(): List<String> {
+        val validateLists: List<Boolean> = listOf(
+            isTyped(name_form),
+            isTyped(mail_address_form),
+            isTyped(address_form),
+            isTyped(memo_form),
+            textLimit(name_form.text.toString(), 10),
+            textLimit(mail_address_form.text.toString(), 40),
+            textLimit(address_form.text.toString(), 20),
+            textLimit(memo_form.text.toString(), 30),
+            mailValidation(mail_address_form.text.toString())
+        )
+
+        val alertTitleList: List<String> = listOf(
+            "名前未入力", "メールアドレス未入力", "住所未入力", "メモ未入力", "名前入力エラー", "メールアドレス入力エラー", "住所入力エラー",
+            "メモ入力エラー", "メールアドレスエラー"
+        )
+        val alertMessageList: List<String> = listOf(
+            "名前を入力して下さい",
+            "メールアドレスを入力して下さい",
+            "住所を入力して下さい",
+            "メモを入力して下さい",
+            "10文字の文字数制限を超えています",
+            "40文字の文字数制限を超えています",
+            "20文字の文字数制限を超えています",
+            "30文字の文字数制限を超えています",
+            "正しいメールアドレスを入力して下さい"
+        )
+
+        var count = 0
+        for (item in validateLists) {
+            if (!item) {
+                return listOf(alertTitleList[count], alertMessageList[count])
+            }
+            count += 1
         }
-        return false
+        return listOf()
     }
 }
 
