@@ -1,11 +1,11 @@
 package com.example.task7
 
-import android.content.Context
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
-import android.view.inputmethod.InputMethodManager
-import android.widget.*
+import android.widget.EditText
+import android.widget.Spinner
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -14,8 +14,6 @@ import java.util.regex.Pattern
 
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityMainBinding
 
     var birthday: String = ""
     var birthdayYear: String = "0"
@@ -27,9 +25,9 @@ class MainActivity : AppCompatActivity() {
 
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 
-        spinnerDataSetFunc(binding.birthdayYearSpinner, R.array.birthday_year_spinner_values)
-        spinnerDataSetFunc(binding.birthdayMonthSpinner, R.array.birthday_month_spinner_values)
-        spinnerDataSetFunc(binding.birthdayDaySpinner, R.array.birthday_day_spinner_values)
+//        spinnerDataSetFunc(binding.birthdayYearSpinner, R.array.birthday_year_spinner_values)
+//        spinnerDataSetFunc(binding.birthdayMonthSpinner, R.array.birthday_month_spinner_values)
+//        spinnerDataSetFunc(binding.birthdayDaySpinner, R.array.birthday_day_spinner_values)
 
         val listener: View.OnTouchListener = View.OnTouchListener { v, event ->
             v.parent.requestDisallowInterceptTouchEvent(true)
@@ -66,62 +64,62 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun spinnerDataSetFunc(spinner: Spinner, array: Int) {
-        ArrayAdapter.createFromResource(
-            this,
-            array, android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            // Specify the layout to use when the list of choices appears
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            // Apply the adapter to the spinner
-            spinner.adapter = adapter
-        }
-
-        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-                // Kotlin Android Extensions
-                when (spinner) {
-                    binding.birthdayYearSpinner -> {
-                        birthdayYear = item
-                    }
-                    binding.birthdayMonthSpinner -> {
-                        birthdayMonth = item
-                    }
-                    binding.birthdayDaySpinner -> {
-                        birthdayDay = item
-                    }
-                }
-                birthday = birthdayYear + "年" + birthdayMonth + "月" + birthdayDay + "日"
-                binding.birthdayConfirmText.text = birthday
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                when (spinner) {
-                    binding.birthdayYearSpinner -> {
-                        birthdayYear = "0"
-                    }
-                    binding.birthdayMonthSpinner -> {
-                        birthdayMonth = "0"
-                    }
-                    binding.birthdayDaySpinner -> {
-                        birthdayDay = "0"
-                    }
-                }
-            }
-        }
-    }
-
-    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
-        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(binding.scrollView.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
-        binding.scrollView.requestFocus()
-        return super.dispatchTouchEvent(ev)
-    }
+//    private fun spinnerDataSetFunc(spinner: Spinner, array: Int) {
+//        ArrayAdapter.createFromResource(
+//            this,
+//            array, android.R.layout.simple_spinner_item
+//        ).also { adapter ->
+//            // Specify the layout to use when the list of choices appears
+//            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+//            // Apply the adapter to the spinner
+//            spinner.adapter = adapter
+//        }
+//
+//        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+//            override fun onItemSelected(
+//                parent: AdapterView<*>?,
+//                view: View?, position: Int, id: Long
+//            ) {
+//                val spinnerParent = parent as Spinner
+//                val item = spinnerParent.selectedItem as String
+//                // Kotlin Android Extensions
+//                when (spinner) {
+//                    binding.birthdayYearSpinner -> {
+//                        birthdayYear = item
+//                    }
+//                    binding.birthdayMonthSpinner -> {
+//                        birthdayMonth = item
+//                    }
+//                    binding.birthdayDaySpinner -> {
+//                        birthdayDay = item
+//                    }
+//                }
+//                birthday = birthdayYear + "年" + birthdayMonth + "月" + birthdayDay + "日"
+//                binding.birthdayConfirmText.text = birthday
+//            }
+//
+//            override fun onNothingSelected(parent: AdapterView<*>?) {
+//                when (spinner) {
+//                    binding.birthdayYearSpinner -> {
+//                        birthdayYear = "0"
+//                    }
+//                    binding.birthdayMonthSpinner -> {
+//                        birthdayMonth = "0"
+//                    }
+//                    binding.birthdayDaySpinner -> {
+//                        birthdayDay = "0"
+//                    }
+//                }
+//            }
+//        }
+//    }
+//
+//    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+//        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+//        imm.hideSoftInputFromWindow(binding.scrollView.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
+//        binding.scrollView.requestFocus()
+//        return super.dispatchTouchEvent(ev)
+//    }
 
     fun textLimit(text: String, limit: Int): Boolean {
         return text.length < limit
