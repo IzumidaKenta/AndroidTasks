@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.task7.MainViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_green"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/name_form_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_regular"
+                android:paddingTop="@dimen/padding_regular"
+                android:paddingBottom="@dimen/padding_regular"
+                android:text="@string/name_form_strings"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_regular"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/name_form"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="@dimen/margin_regular"
+                android:background="@android:color/white"
+                android:inputType="text"
+                android:paddingLeft="10dp" />
+
+            <TextView
+                android:id="@+id/mail_address_form_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_regular"
+                android:paddingTop="@dimen/padding_regular"
+                android:paddingBottom="@dimen/padding_regular"
+                android:text="@string/mail_address_form_text"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_regular"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/mail_address_form"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="@dimen/margin_regular"
+                android:background="@android:color/white"
+                android:inputType="text"
+                android:paddingLeft="10dp" />
+
+            <TextView
+                android:id="@+id/birthday_form_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_regular"
+                android:paddingTop="@dimen/padding_regular"
+                android:paddingBottom="@dimen/padding_regular"
+                android:text="@string/birthday_form_text"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_regular"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_regular"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/birthday_year_spinner"
+                    android:layout_width="65dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:entries="@{@stringArray/birthday_year_spinner_values}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="@string/birthday_year_text"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_regular" />
+
+                <Spinner
+                    android:id="@+id/birthday_month_spinner"
+                    android:layout_width="65dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:entries="@{@stringArray/birthday_month_spinner_values}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="@string/birthday_month_text"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_regular" />
+
+                <Spinner
+                    android:id="@+id/birthday_day_spinner"
+                    android:layout_width="65dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:entries="@{@stringArray/birthday_day_spinner_values}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="@string/birthday_day_text"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_regular" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/birthday_confirm_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_regular"
+                android:text="@{viewmodel.birthdayYearSelected + viewmodel.birthdayMonthSelected + viewmodel.birthdayDaySelected}"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_size_regular" />
+
+            <TextView
+                android:id="@+id/address_form_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_regular"
+                android:paddingBottom="@dimen/padding_regular"
+                android:text="@string/address_form_text"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_regular"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/address_form"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="@dimen/margin_regular"
+                android:background="@android:color/white"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:scrollbars="vertical" />
+
+            <TextView
+                android:id="@+id/memo_form_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_regular"
+                android:paddingTop="@dimen/padding_regular"
+                android:paddingBottom="@dimen/padding_regular"
+                android:text="@string/memo_form_text"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_regular"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/memo_form"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginHorizontal="@dimen/margin_regular"
+                android:background="@android:color/white"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:scrollbars="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal">
+
+                <Button
+                    android:id="@+id/send_button"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_regular"
+                    android:background="@android:color/black"
+                    android:text="@string/send_button_text"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_regular"
+                    android:onClick="@{() -> viewmodel.tapSendButton()}"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,413 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:2:1-21:12
+MERGED from [androidx.multidex:multidex:2.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/97e32df682d94a79911cf829c0b69280/multidex-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-analytics-ktx:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/61003344b5223c2f92d7b2fd08521877/jetified-firebase-analytics-ktx-18.0.0/AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.firebase:firebase-common-ktx:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/42603e3c4473908d434c288a4fa06ccf/jetified-firebase-common-ktx-19.4.0/AndroidManifest.xml:2:1-21:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/aa63bea91dc2cfb48d94d34d2623598e/constraintlayout-2.0.4/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/28c54a060e4235efb9c1588d3d0ddbc1/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.3.2] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/e03b7f1903b9196d4c274876549b7560/jetified-core-ktx-1.3.2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-firestore:22.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/462a12384955fc1236b56f1a65482bfb/jetified-firebase-firestore-22.0.0/AndroidManifest.xml:2:1-26:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/55275f470fd8614729f5050bd7d973ee/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/281050928ea218926f946c40f084bf33/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6b8e50f421e1e16dd7c11460f6501d1e/jetified-firebase-auth-interop-18.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-database-collection:17.0.1] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/ece919b317b918c2bc982604dcadd4da/jetified-firebase-database-collection-17.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/9b86c60201f75924575e9a974048f146/jetified-play-services-base-17.0.0/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-analytics:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/4f1852db8ef626532ae9bd0363ff75b0/jetified-firebase-analytics-18.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6af72406a584f267bf6e50d7730eba6e/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:17:1-36:12
+MERGED from [com.google.firebase:firebase-installations:16.3.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a10bcc9060d8965a76f3f1e269ff756a/jetified-firebase-installations-16.3.4/AndroidManifest.xml:2:1-24:12
+MERGED from [com.google.firebase:firebase-common:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1b2b048705b73b46e1a3620443ec1039/jetified-firebase-common-19.4.0/AndroidManifest.xml:15:1-40:12
+MERGED from [com.google.firebase:firebase-installations-interop:16.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/7c10175b0fda1d0468594918e26b9888/jetified-firebase-installations-interop-16.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/56a2b7e66cc0c2d03e272c295d116745/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:17:1-46:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/3fb22a6a0c1b55073f4422708ba79b6d/jetified-play-services-measurement-sdk-18.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/f9f5371befb2ac1d0232ce40c6a2b56e/jetified-play-services-measurement-impl-18.0.0/AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1e2fb4ab4cba6127bcd02eed3d13225a/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a1a8df9fafd60cac8b76bf8ba12f5802/jetified-play-services-measurement-sdk-api-18.0.0/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-measurement-base:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a9cde2ffdf991fd131b169e199e03e47/jetified-play-services-measurement-base-18.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/7ff52ea6d6f74efd60f6af5cbf622706/jetified-play-services-stats-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/b8b4a6fb2ee0ece0597a9baea86fbf70/jetified-firebase-measurement-connector-18.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/fb379b1c63a590fadb25a6f2531d6e61/jetified-play-services-basement-17.0.0/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/28dff25122a7b5d53d4b001d7f7407f4/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/7a55eee7ef74fe624cad129f93126997/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/381d61b21f5fea785ba2c5eab6732d60/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/5532afb21c387f665fbce3f2f3f7949d/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/9cde8d4fc8f3329035e3481c987c87cb/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/67405fe83753e91c7209c90a3788e194/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/84cf324918cb936505c6caf8bad532ee/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/0794055f980ff2389f25bfca2bc04ce7/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/d8c968ec859dd007231bf916b6934635/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/d9a53286685e89ba8ba99276c32f124a/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.3.2] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/aefbc4a5bde668bd8930902fc71e09a8/core-1.3.2/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/155b3cef145c752260b131d24361995c/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/353e3bc7f3e7e4ef02f6ee28ddcc22b6/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.firebase:firebase-components:16.0.1] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/40301986c67f0444b95cdb88a68c14ac/jetified-firebase-components-16.0.1/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/5f86ed083b1089d3c5029dd5e16c9744/lifecycle-runtime-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/d1b0fda9043ee6fcc1d6ef9178ab509a/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a1c48ff32c79491e3c784874019acbfe/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/78424971392053b9829661bc64056b1a/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/9c5410ea225356c42e0328b02cfdbeb7/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/fc02db1fe7d6d7c8df841054dddf45f1/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/73e32e21d741aa563aa9e386ce452c91/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/dafed1e2083635c1505d589688992230/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/09ddf216fa4239cfd8ae65ec7e1ad292/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:protolite-well-known-types:17.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/099e57c1c6162ed412bfff4e785126d0/jetified-protolite-well-known-types-17.1.0/AndroidManifest.xml:2:1-11:12
+MERGED from [io.grpc:grpc-android:1.28.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/dcf080fe9d4bce8aed7044cc894e851a/jetified-grpc-android-1.28.0/AndroidManifest.xml:2:1-13:12
+INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:2:1-21:12
+	package
+		ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:3:5-32
+		INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml
+		ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:2:1-21:12
+		INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml
+		ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:2:1-21:12
+		INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:5:5-19:19
+MERGED from [com.google.firebase:firebase-analytics-ktx:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/61003344b5223c2f92d7b2fd08521877/jetified-firebase-analytics-ktx-18.0.0/AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.firebase:firebase-analytics-ktx:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/61003344b5223c2f92d7b2fd08521877/jetified-firebase-analytics-ktx-18.0.0/AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/42603e3c4473908d434c288a4fa06ccf/jetified-firebase-common-ktx-19.4.0/AndroidManifest.xml:11:5-19:19
+MERGED from [com.google.firebase:firebase-common-ktx:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/42603e3c4473908d434c288a4fa06ccf/jetified-firebase-common-ktx-19.4.0/AndroidManifest.xml:11:5-19:19
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/aa63bea91dc2cfb48d94d34d2623598e/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/aa63bea91dc2cfb48d94d34d2623598e/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-firestore:22.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/462a12384955fc1236b56f1a65482bfb/jetified-firebase-firestore-22.0.0/AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:22.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/462a12384955fc1236b56f1a65482bfb/jetified-firebase-firestore-22.0.0/AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6b8e50f421e1e16dd7c11460f6501d1e/jetified-firebase-auth-interop-18.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6b8e50f421e1e16dd7c11460f6501d1e/jetified-firebase-auth-interop-18.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/9b86c60201f75924575e9a974048f146/jetified-play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/9b86c60201f75924575e9a974048f146/jetified-play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.firebase:firebase-analytics:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/4f1852db8ef626532ae9bd0363ff75b0/jetified-firebase-analytics-18.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/4f1852db8ef626532ae9bd0363ff75b0/jetified-firebase-analytics-18.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6af72406a584f267bf6e50d7730eba6e/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6af72406a584f267bf6e50d7730eba6e/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.firebase:firebase-installations:16.3.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a10bcc9060d8965a76f3f1e269ff756a/jetified-firebase-installations-16.3.4/AndroidManifest.xml:14:5-22:19
+MERGED from [com.google.firebase:firebase-installations:16.3.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a10bcc9060d8965a76f3f1e269ff756a/jetified-firebase-installations-16.3.4/AndroidManifest.xml:14:5-22:19
+MERGED from [com.google.firebase:firebase-common:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1b2b048705b73b46e1a3620443ec1039/jetified-firebase-common-19.4.0/AndroidManifest.xml:25:5-38:19
+MERGED from [com.google.firebase:firebase-common:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1b2b048705b73b46e1a3620443ec1039/jetified-firebase-common-19.4.0/AndroidManifest.xml:25:5-38:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/56a2b7e66cc0c2d03e272c295d116745/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/56a2b7e66cc0c2d03e272c295d116745/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/3fb22a6a0c1b55073f4422708ba79b6d/jetified-play-services-measurement-sdk-18.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/3fb22a6a0c1b55073f4422708ba79b6d/jetified-play-services-measurement-sdk-18.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/f9f5371befb2ac1d0232ce40c6a2b56e/jetified-play-services-measurement-impl-18.0.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/f9f5371befb2ac1d0232ce40c6a2b56e/jetified-play-services-measurement-impl-18.0.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1e2fb4ab4cba6127bcd02eed3d13225a/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1e2fb4ab4cba6127bcd02eed3d13225a/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a9cde2ffdf991fd131b169e199e03e47/jetified-play-services-measurement-base-18.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a9cde2ffdf991fd131b169e199e03e47/jetified-play-services-measurement-base-18.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/7ff52ea6d6f74efd60f6af5cbf622706/jetified-play-services-stats-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/7ff52ea6d6f74efd60f6af5cbf622706/jetified-play-services-stats-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/b8b4a6fb2ee0ece0597a9baea86fbf70/jetified-firebase-measurement-connector-18.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/b8b4a6fb2ee0ece0597a9baea86fbf70/jetified-firebase-measurement-connector-18.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/fb379b1c63a590fadb25a6f2531d6e61/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/fb379b1c63a590fadb25a6f2531d6e61/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.3.2] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/aefbc4a5bde668bd8930902fc71e09a8/core-1.3.2/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.2] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/aefbc4a5bde668bd8930902fc71e09a8/core-1.3.2/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/353e3bc7f3e7e4ef02f6ee28ddcc22b6/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/353e3bc7f3e7e4ef02f6ee28ddcc22b6/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.3.2] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/aefbc4a5bde668bd8930902fc71e09a8/core-1.3.2/AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.example.task6.MainActivity
+ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:12:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml:16:27-74
+uses-sdk
+INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml
+INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml
+MERGED from [androidx.multidex:multidex:2.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/97e32df682d94a79911cf829c0b69280/multidex-2.0.0/AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/97e32df682d94a79911cf829c0b69280/multidex-2.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.google.firebase:firebase-analytics-ktx:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/61003344b5223c2f92d7b2fd08521877/jetified-firebase-analytics-ktx-18.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics-ktx:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/61003344b5223c2f92d7b2fd08521877/jetified-firebase-analytics-ktx-18.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/42603e3c4473908d434c288a4fa06ccf/jetified-firebase-common-ktx-19.4.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-common-ktx:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/42603e3c4473908d434c288a4fa06ccf/jetified-firebase-common-ktx-19.4.0/AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/aa63bea91dc2cfb48d94d34d2623598e/constraintlayout-2.0.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/aa63bea91dc2cfb48d94d34d2623598e/constraintlayout-2.0.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/28c54a060e4235efb9c1588d3d0ddbc1/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/28c54a060e4235efb9c1588d3d0ddbc1/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.3.2] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/e03b7f1903b9196d4c274876549b7560/jetified-core-ktx-1.3.2/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.3.2] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/e03b7f1903b9196d4c274876549b7560/jetified-core-ktx-1.3.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-firestore:22.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/462a12384955fc1236b56f1a65482bfb/jetified-firebase-firestore-22.0.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-firestore:22.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/462a12384955fc1236b56f1a65482bfb/jetified-firebase-firestore-22.0.0/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/55275f470fd8614729f5050bd7d973ee/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/55275f470fd8614729f5050bd7d973ee/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/281050928ea218926f946c40f084bf33/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/281050928ea218926f946c40f084bf33/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6b8e50f421e1e16dd7c11460f6501d1e/jetified-firebase-auth-interop-18.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6b8e50f421e1e16dd7c11460f6501d1e/jetified-firebase-auth-interop-18.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-collection:17.0.1] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/ece919b317b918c2bc982604dcadd4da/jetified-firebase-database-collection-17.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:17.0.1] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/ece919b317b918c2bc982604dcadd4da/jetified-firebase-database-collection-17.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/9b86c60201f75924575e9a974048f146/jetified-play-services-base-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/9b86c60201f75924575e9a974048f146/jetified-play-services-base-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/4f1852db8ef626532ae9bd0363ff75b0/jetified-firebase-analytics-18.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/4f1852db8ef626532ae9bd0363ff75b0/jetified-firebase-analytics-18.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6af72406a584f267bf6e50d7730eba6e/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6af72406a584f267bf6e50d7730eba6e/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-installations:16.3.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a10bcc9060d8965a76f3f1e269ff756a/jetified-firebase-installations-16.3.4/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-installations:16.3.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a10bcc9060d8965a76f3f1e269ff756a/jetified-firebase-installations-16.3.4/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-common:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1b2b048705b73b46e1a3620443ec1039/jetified-firebase-common-19.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1b2b048705b73b46e1a3620443ec1039/jetified-firebase-common-19.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-installations-interop:16.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/7c10175b0fda1d0468594918e26b9888/jetified-firebase-installations-interop-16.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-installations-interop:16.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/7c10175b0fda1d0468594918e26b9888/jetified-firebase-installations-interop-16.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/56a2b7e66cc0c2d03e272c295d116745/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/56a2b7e66cc0c2d03e272c295d116745/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/3fb22a6a0c1b55073f4422708ba79b6d/jetified-play-services-measurement-sdk-18.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/3fb22a6a0c1b55073f4422708ba79b6d/jetified-play-services-measurement-sdk-18.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/f9f5371befb2ac1d0232ce40c6a2b56e/jetified-play-services-measurement-impl-18.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/f9f5371befb2ac1d0232ce40c6a2b56e/jetified-play-services-measurement-impl-18.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1e2fb4ab4cba6127bcd02eed3d13225a/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1e2fb4ab4cba6127bcd02eed3d13225a/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a1a8df9fafd60cac8b76bf8ba12f5802/jetified-play-services-measurement-sdk-api-18.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a1a8df9fafd60cac8b76bf8ba12f5802/jetified-play-services-measurement-sdk-api-18.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a9cde2ffdf991fd131b169e199e03e47/jetified-play-services-measurement-base-18.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a9cde2ffdf991fd131b169e199e03e47/jetified-play-services-measurement-base-18.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/7ff52ea6d6f74efd60f6af5cbf622706/jetified-play-services-stats-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/7ff52ea6d6f74efd60f6af5cbf622706/jetified-play-services-stats-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/b8b4a6fb2ee0ece0597a9baea86fbf70/jetified-firebase-measurement-connector-18.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/b8b4a6fb2ee0ece0597a9baea86fbf70/jetified-firebase-measurement-connector-18.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/fb379b1c63a590fadb25a6f2531d6e61/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/fb379b1c63a590fadb25a6f2531d6e61/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/28dff25122a7b5d53d4b001d7f7407f4/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/28dff25122a7b5d53d4b001d7f7407f4/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/7a55eee7ef74fe624cad129f93126997/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/7a55eee7ef74fe624cad129f93126997/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/381d61b21f5fea785ba2c5eab6732d60/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/381d61b21f5fea785ba2c5eab6732d60/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/5532afb21c387f665fbce3f2f3f7949d/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/5532afb21c387f665fbce3f2f3f7949d/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/9cde8d4fc8f3329035e3481c987c87cb/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/9cde8d4fc8f3329035e3481c987c87cb/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/67405fe83753e91c7209c90a3788e194/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/67405fe83753e91c7209c90a3788e194/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/84cf324918cb936505c6caf8bad532ee/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/84cf324918cb936505c6caf8bad532ee/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/0794055f980ff2389f25bfca2bc04ce7/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/0794055f980ff2389f25bfca2bc04ce7/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/d8c968ec859dd007231bf916b6934635/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/d8c968ec859dd007231bf916b6934635/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/d9a53286685e89ba8ba99276c32f124a/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/d9a53286685e89ba8ba99276c32f124a/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.3.2] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/aefbc4a5bde668bd8930902fc71e09a8/core-1.3.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.2] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/aefbc4a5bde668bd8930902fc71e09a8/core-1.3.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/155b3cef145c752260b131d24361995c/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/155b3cef145c752260b131d24361995c/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/353e3bc7f3e7e4ef02f6ee28ddcc22b6/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/353e3bc7f3e7e4ef02f6ee28ddcc22b6/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:16.0.1] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/40301986c67f0444b95cdb88a68c14ac/jetified-firebase-components-16.0.1/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.0.1] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/40301986c67f0444b95cdb88a68c14ac/jetified-firebase-components-16.0.1/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/5f86ed083b1089d3c5029dd5e16c9744/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/5f86ed083b1089d3c5029dd5e16c9744/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/d1b0fda9043ee6fcc1d6ef9178ab509a/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/d1b0fda9043ee6fcc1d6ef9178ab509a/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a1c48ff32c79491e3c784874019acbfe/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a1c48ff32c79491e3c784874019acbfe/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/78424971392053b9829661bc64056b1a/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/78424971392053b9829661bc64056b1a/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/9c5410ea225356c42e0328b02cfdbeb7/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/9c5410ea225356c42e0328b02cfdbeb7/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/fc02db1fe7d6d7c8df841054dddf45f1/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/fc02db1fe7d6d7c8df841054dddf45f1/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/73e32e21d741aa563aa9e386ce452c91/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/73e32e21d741aa563aa9e386ce452c91/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/dafed1e2083635c1505d589688992230/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/dafed1e2083635c1505d589688992230/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/09ddf216fa4239cfd8ae65ec7e1ad292/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/09ddf216fa4239cfd8ae65ec7e1ad292/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:17.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/099e57c1c6162ed412bfff4e785126d0/jetified-protolite-well-known-types-17.1.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:17.1.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/099e57c1c6162ed412bfff4e785126d0/jetified-protolite-well-known-types-17.1.0/AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.28.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/dcf080fe9d4bce8aed7044cc894e851a/jetified-grpc-android-1.28.0/AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.28.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/dcf080fe9d4bce8aed7044cc894e851a/jetified-grpc-android-1.28.0/AndroidManifest.xml:7:5-9:41
+INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml
+INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml
+		ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml
+		ADDED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/izumidakenta/local/AndroidTasks/task6/app/src/main/AndroidManifest.xml
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-analytics-ktx:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/61003344b5223c2f92d7b2fd08521877/jetified-firebase-analytics-ktx-18.0.0/AndroidManifest.xml:8:9-14:19
+MERGED from [com.google.firebase:firebase-common-ktx:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/42603e3c4473908d434c288a4fa06ccf/jetified-firebase-common-ktx-19.4.0/AndroidManifest.xml:12:9-18:19
+MERGED from [com.google.firebase:firebase-common-ktx:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/42603e3c4473908d434c288a4fa06ccf/jetified-firebase-common-ktx-19.4.0/AndroidManifest.xml:12:9-18:19
+MERGED from [com.google.firebase:firebase-firestore:22.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/462a12384955fc1236b56f1a65482bfb/jetified-firebase-firestore-22.0.0/AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:22.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/462a12384955fc1236b56f1a65482bfb/jetified-firebase-firestore-22.0.0/AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.android.gms:play-services-measurement-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6af72406a584f267bf6e50d7730eba6e/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.android.gms:play-services-measurement-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6af72406a584f267bf6e50d7730eba6e/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.firebase:firebase-installations:16.3.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a10bcc9060d8965a76f3f1e269ff756a/jetified-firebase-installations-16.3.4/AndroidManifest.xml:15:9-21:19
+MERGED from [com.google.firebase:firebase-installations:16.3.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a10bcc9060d8965a76f3f1e269ff756a/jetified-firebase-installations-16.3.4/AndroidManifest.xml:15:9-21:19
+MERGED from [com.google.firebase:firebase-common:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1b2b048705b73b46e1a3620443ec1039/jetified-firebase-common-19.4.0/AndroidManifest.xml:33:9-37:35
+MERGED from [com.google.firebase:firebase-common:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1b2b048705b73b46e1a3620443ec1039/jetified-firebase-common-19.4.0/AndroidManifest.xml:33:9-37:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics-ktx:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/61003344b5223c2f92d7b2fd08521877/jetified-firebase-analytics-ktx-18.0.0/AndroidManifest.xml:10:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1b2b048705b73b46e1a3620443ec1039/jetified-firebase-common-19.4.0/AndroidManifest.xml:37:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1b2b048705b73b46e1a3620443ec1039/jetified-firebase-common-19.4.0/AndroidManifest.xml:35:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics-ktx:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/61003344b5223c2f92d7b2fd08521877/jetified-firebase-analytics-ktx-18.0.0/AndroidManifest.xml:9:13-84
+meta-data#com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar
+ADDED from [com.google.firebase:firebase-analytics-ktx:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/61003344b5223c2f92d7b2fd08521877/jetified-firebase-analytics-ktx-18.0.0/AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [com.google.firebase:firebase-analytics-ktx:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/61003344b5223c2f92d7b2fd08521877/jetified-firebase-analytics-ktx-18.0.0/AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics-ktx:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/61003344b5223c2f92d7b2fd08521877/jetified-firebase-analytics-ktx-18.0.0/AndroidManifest.xml:12:17-126
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/42603e3c4473908d434c288a4fa06ccf/jetified-firebase-common-ktx-19.4.0/AndroidManifest.xml:15:13-17:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/42603e3c4473908d434c288a4fa06ccf/jetified-firebase-common-ktx-19.4.0/AndroidManifest.xml:17:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/42603e3c4473908d434c288a4fa06ccf/jetified-firebase-common-ktx-19.4.0/AndroidManifest.xml:16:17-113
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-firestore:22.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/462a12384955fc1236b56f1a65482bfb/jetified-firebase-firestore-22.0.0/AndroidManifest.xml:13:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6af72406a584f267bf6e50d7730eba6e/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6af72406a584f267bf6e50d7730eba6e/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-installations:16.3.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a10bcc9060d8965a76f3f1e269ff756a/jetified-firebase-installations-16.3.4/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-installations:16.3.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a10bcc9060d8965a76f3f1e269ff756a/jetified-firebase-installations-16.3.4/AndroidManifest.xml:10:5-79
+MERGED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/f9f5371befb2ac1d0232ce40c6a2b56e/jetified-play-services-measurement-impl-18.0.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/f9f5371befb2ac1d0232ce40c6a2b56e/jetified-play-services-measurement-impl-18.0.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a1a8df9fafd60cac8b76bf8ba12f5802/jetified-play-services-measurement-sdk-api-18.0.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a1a8df9fafd60cac8b76bf8ba12f5802/jetified-play-services-measurement-sdk-api-18.0.0/AndroidManifest.xml:24:5-79
+MERGED from [io.grpc:grpc-android:1.28.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/dcf080fe9d4bce8aed7044cc894e851a/jetified-grpc-android-1.28.0/AndroidManifest.xml:11:5-79
+MERGED from [io.grpc:grpc-android:1.28.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/dcf080fe9d4bce8aed7044cc894e851a/jetified-grpc-android-1.28.0/AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:22.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/462a12384955fc1236b56f1a65482bfb/jetified-firebase-firestore-22.0.0/AndroidManifest.xml:13:22-76
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.firebase:firebase-firestore:22.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/462a12384955fc1236b56f1a65482bfb/jetified-firebase-firestore-22.0.0/AndroidManifest.xml:14:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6af72406a584f267bf6e50d7730eba6e/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6af72406a584f267bf6e50d7730eba6e/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-installations:16.3.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a10bcc9060d8965a76f3f1e269ff756a/jetified-firebase-installations-16.3.4/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-installations:16.3.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a10bcc9060d8965a76f3f1e269ff756a/jetified-firebase-installations-16.3.4/AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/f9f5371befb2ac1d0232ce40c6a2b56e/jetified-play-services-measurement-impl-18.0.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/f9f5371befb2ac1d0232ce40c6a2b56e/jetified-play-services-measurement-impl-18.0.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a1a8df9fafd60cac8b76bf8ba12f5802/jetified-play-services-measurement-sdk-api-18.0.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a1a8df9fafd60cac8b76bf8ba12f5802/jetified-play-services-measurement-sdk-api-18.0.0/AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:22.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/462a12384955fc1236b56f1a65482bfb/jetified-firebase-firestore-22.0.0/AndroidManifest.xml:14:22-64
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:22.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/462a12384955fc1236b56f1a65482bfb/jetified-firebase-firestore-22.0.0/AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:22.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/462a12384955fc1236b56f1a65482bfb/jetified-firebase-firestore-22.0.0/AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:22.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/462a12384955fc1236b56f1a65482bfb/jetified-firebase-firestore-22.0.0/AndroidManifest.xml:21:17-111
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/9b86c60201f75924575e9a974048f146/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/9b86c60201f75924575e9a974048f146/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/9b86c60201f75924575e9a974048f146/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/9b86c60201f75924575e9a974048f146/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-measurement-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6af72406a584f267bf6e50d7730eba6e/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/f9f5371befb2ac1d0232ce40c6a2b56e/jetified-play-services-measurement-impl-18.0.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/f9f5371befb2ac1d0232ce40c6a2b56e/jetified-play-services-measurement-impl-18.0.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a1a8df9fafd60cac8b76bf8ba12f5802/jetified-play-services-measurement-sdk-api-18.0.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a1a8df9fafd60cac8b76bf8ba12f5802/jetified-play-services-measurement-sdk-api-18.0.0/AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6af72406a584f267bf6e50d7730eba6e/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:24:22-65
+meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
+ADDED from [com.google.android.gms:play-services-measurement-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6af72406a584f267bf6e50d7730eba6e/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.android.gms:play-services-measurement-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6af72406a584f267bf6e50d7730eba6e/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-api:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/6af72406a584f267bf6e50d7730eba6e/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:31:17-139
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
+ADDED from [com.google.firebase:firebase-installations:16.3.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a10bcc9060d8965a76f3f1e269ff756a/jetified-firebase-installations-16.3.4/AndroidManifest.xml:18:13-20:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:16.3.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a10bcc9060d8965a76f3f1e269ff756a/jetified-firebase-installations-16.3.4/AndroidManifest.xml:20:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:16.3.4] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/a10bcc9060d8965a76f3f1e269ff756a/jetified-firebase-installations-16.3.4/AndroidManifest.xml:19:17-127
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1b2b048705b73b46e1a3620443ec1039/jetified-firebase-common-19.4.0/AndroidManifest.xml:26:9-31:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1b2b048705b73b46e1a3620443ec1039/jetified-firebase-common-19.4.0/AndroidManifest.xml:28:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1b2b048705b73b46e1a3620443ec1039/jetified-firebase-common-19.4.0/AndroidManifest.xml:30:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1b2b048705b73b46e1a3620443ec1039/jetified-firebase-common-19.4.0/AndroidManifest.xml:29:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1b2b048705b73b46e1a3620443ec1039/jetified-firebase-common-19.4.0/AndroidManifest.xml:31:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:19.4.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/1b2b048705b73b46e1a3620443ec1039/jetified-firebase-common-19.4.0/AndroidManifest.xml:27:13-77
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/f9f5371befb2ac1d0232ce40c6a2b56e/jetified-play-services-measurement-impl-18.0.0/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/f9f5371befb2ac1d0232ce40c6a2b56e/jetified-play-services-measurement-impl-18.0.0/AndroidManifest.xml:26:5-110
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:26:22-107
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:29:9-33:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:31:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:30:13-85
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:35:9-38:40
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:38:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:36:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:39:9-43:72
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:41:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:42:13-37
+	android:permission
+		ADDED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:43:13-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:18.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/30df49ded964e0f43a49812b98ce6379/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:40:13-87
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/fb379b1c63a590fadb25a6f2531d6e61/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/fb379b1c63a590fadb25a6f2531d6e61/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/izumidakenta/.gradle/caches/transforms-2/files-2.1/fb379b1c63a590fadb25a6f2531d6e61/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
