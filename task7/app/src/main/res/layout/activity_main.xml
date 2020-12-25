@@ -3,9 +3,10 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+
         <variable
-            name="birthdayText"
-            type="String" />
+            name="viewmodel"
+            type="com.example.task7.MainViewModel" />
 
     </data>
 
@@ -87,7 +88,8 @@
                     android:layout_width="65dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:background="@android:color/white" />
+                    android:background="@android:color/white"
+                    android:entries="@{@stringArray/birthday_year_spinner_values}" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -103,7 +105,8 @@
                     android:layout_width="65dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:background="@android:color/white" />
+                    android:background="@android:color/white"
+                    android:entries="@{@stringArray/birthday_month_spinner_values}" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -119,7 +122,8 @@
                     android:layout_width="65dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:background="@android:color/white" />
+                    android:background="@android:color/white"
+                    android:entries="@{@stringArray/birthday_day_spinner_values}" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -136,9 +140,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_regular"
+                android:text="@{viewmodel.birthdayYearSelected + viewmodel.birthdayMonthSelected + viewmodel.birthdayDaySelected}"
                 android:textColor="@color/blue"
-                android:textSize="@dimen/text_size_regular"
-                android:text="@{birthdayText}"/>
+                android:textSize="@dimen/text_size_regular" />
 
             <TextView
                 android:id="@+id/address_form_text"
@@ -201,7 +205,8 @@
                     android:background="@android:color/black"
                     android:text="@string/send_button_text"
                     android:textColor="@android:color/white"
-                    android:textSize="@dimen/text_size_regular" />
+                    android:textSize="@dimen/text_size_regular"
+                    android:onClick="@{() -> viewmodel.tapSendButton()}"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
